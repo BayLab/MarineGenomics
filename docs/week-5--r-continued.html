@@ -4,24 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Week 5- R Continued | Week 10 wrap up</title>
-  <meta name="description" content="6 Week 5- R Continued | Week 10 wrap up" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <title>6 Week 5- R Continued | Test.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Week 5- R Continued | Week 10 wrap up" />
+  <meta property="og:title" content="6 Week 5- R Continued | Test.knit" />
   <meta property="og:type" content="book" />
-  
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Week 5- R Continued | Week 10 wrap up" />
+  <meta name="twitter:title" content="6 Week 5- R Continued | Test.knit" />
   
   
   
 
-<meta name="author" content="Serena Caplins" />
+<meta name="author" content="" />
 
 
 
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="week-4--the-r-environment.html"/>
 <link rel="next" href="week-6--principle-component-analyses.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -303,7 +302,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Week 10 wrap up</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
           </h1>
         </div>
 
@@ -311,11 +310,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-5--r-continued" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Week 5- R Continued</h1>
+<div id="week-5--r-continued" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Week 5- R Continued<a href="week-5--r-continued.html#week-5--r-continued" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>We’re again drawing some of this material from the STEMinist_R materials which can be found <a href="https://github.com/ecalfee/STEMinist_R.git">here</a></p>
-<div id="plotting" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> 2.1 Plotting</h2>
+<div id="plotting" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> 2.1 Plotting<a href="week-5--r-continued.html#plotting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>These lessons are evenly divided between live coding and performed by the instructor and exercises performed by the students in class with instructor support.</p>
 <p>This class will take place with students typing directly into an R script for the exercises all of which can be found in the Week 4 file <a href="https://github.com/BayLab/MarineGenomicsData.git">here</a></p>
 <p>You can download just the R files for just this week via wget with the following link</p>
@@ -337,8 +336,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 </div>
-<div id="scatterplots" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Scatterplots</h2>
+<div id="scatterplots" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Scatterplots<a href="week-5--r-continued.html#scatterplots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Within our <code>msleep</code> dataframe let’s plot sleep_total by bodywt (bodyweight)</p>
 <div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="week-5--r-continued.html#cb407-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb407-2"><a href="week-5--r-continued.html#cb407-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -352,8 +351,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb410-2"><a href="week-5--r-continued.html#cb410-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(msleep<span class="sc">$</span>sleep_total<span class="sc">~</span>msleep<span class="sc">$</span>sleep_rem) <span class="co">#you&#39;ll notice this swaps the x and y axis</span></span></code></pre></div>
 <p><img src="Test_files/figure-html/5-2-1.png" width="768" /></p>
 </div>
-<div id="customizing-your-plot" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> Customizing your plot</h2>
+<div id="customizing-your-plot" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Customizing your plot<a href="week-5--r-continued.html#customizing-your-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>There are several different arguments within plotting functions that can be used to customize your plot.
 <ul>
@@ -366,12 +365,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 <p>You can view different point characters with <code>?pch</code></p>
-<p>There are <strong>many</strong> color options in R. For some general colors you can write the name (blue, red, green, etc). There are apparently 657 named colors in R (including "slateblue3, and peachpuff4) but you can also use the color hexidecimal code for a given color. There are several comprehensives guides for colors in R online and one of which can be found (here)[<a href="https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf" class="uri">https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf</a>]</p>
+<p>There are <strong>many</strong> color options in R. For some general colors you can write the name (blue, red, green, etc). There are apparently 657 named colors in R (including “slateblue3, and peachpuff4) but you can also use the color hexidecimal code for a given color. There are several comprehensives guides for colors in R online and one of which can be found (here)[<a href="https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf" class="uri">https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf</a>]</p>
 <p>Let’s remake the total_sleep against sleep_rem plot and add-in some modifiers</p>
 <div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb411-1"><a href="week-5--r-continued.html#cb411-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Choose a pch and make the color blue and give it a bottom+left border</span></span>
 <span id="cb411-2"><a href="week-5--r-continued.html#cb411-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(msleep<span class="sc">$</span>sleep_total<span class="sc">~</span>msleep<span class="sc">$</span>sleep_rem, <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">col=</span><span class="st">&quot;blue&quot;</span>, <span class="at">bty=</span><span class="st">&quot;L&quot;</span>)</span></code></pre></div>
 <p><img src="Test_files/figure-html/5-3-1.png" width="768" /></p>
-<p>We can change the axes and title labels using “xlab,” “ylab,” and “main” arguments. Let’s add labels to our plot.</p>
+<p>We can change the axes and title labels using “xlab”, “ylab”, and “main” arguments. Let’s add labels to our plot.</p>
 <div class="sourceCode" id="cb412"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb412-1"><a href="week-5--r-continued.html#cb412-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Choose a pch and make the color blue and give it a bottom+left border</span></span>
 <span id="cb412-2"><a href="week-5--r-continued.html#cb412-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(msleep<span class="sc">$</span>sleep_total<span class="sc">~</span>msleep<span class="sc">$</span>sleep_rem, <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">col=</span><span class="st">&quot;blue&quot;</span>, <span class="at">bty=</span><span class="st">&quot;L&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;REM Sleep (hours)&quot;</span>, <span class="at">ylab=</span> <span class="st">&quot;Total Sleep (hours)&quot;</span>) </span></code></pre></div>
 <p><img src="Test_files/figure-html/5-4-1.png" width="768" /></p>
@@ -413,10 +412,10 @@ Another example looking at sleep variation across the different types of consume
 <div class="sourceCode" id="cb419"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb419-1"><a href="week-5--r-continued.html#cb419-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(msleep<span class="sc">$</span>sleep_total<span class="sc">~</span><span class="fu">as.factor</span>(msleep<span class="sc">$</span>vore),<span class="at">col=</span><span class="fu">rainbow</span>(<span class="dv">4</span>), <span class="at">xlab=</span><span class="st">&quot;REM Sleep (hours)&quot;</span>, <span class="at">ylab=</span> <span class="st">&quot;Total Sleep (hours)&quot;</span>)</span></code></pre></div>
 <p><img src="Test_files/figure-html/5-9-1.png" width="768" /></p>
 </div>
-<div id="practice-problems-2.1" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Practice Problems 2.1</h2>
+<div id="practice-problems-2.1" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Practice Problems 2.1<a href="week-5--r-continued.html#practice-problems-2.1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
-<h1 id="exercise-2.1">Exercise 2.1</h1>
+<h1 id="exercise-2.1" class="hasAnchor">Exercise 2.1<a href="week-5--r-continued.html#exercise-2.1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Read in the data using <code>data(ChickWeight)</code></p>
 </blockquote>
 <div class="sourceCode" id="cb420"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb420-1"><a href="week-5--r-continued.html#cb420-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: this dataset can also be accessed directly from the ChickWeight package in R </span></span>
@@ -518,8 +517,8 @@ Note: if histogram has n breaks and n is less than 10, it will just use first n 
 </p>
 </details>
 </div>
-<div id="plotting-with-ggplot2" class="section level2" number="6.5">
-<h2><span class="header-section-number">6.5</span> 2.2 plotting with ggplot2</h2>
+<div id="plotting-with-ggplot2" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> 2.2 plotting with ggplot2<a href="week-5--r-continued.html#plotting-with-ggplot2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>GGPlot is a package that allows you to make a lot of different kinds of plots and has become increasingly popular. There are also many tutorials on how to use ggplot as well as example code that could be modified to fit the data you’re interested in plotting. There is a really helpful cheatsheat (here)[<a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" class="uri">https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf</a>]</p>
 <p>There is a little bit of a learning curve for ggplot as the syntax is structured differently than base R plotting. One thing that remains the same and is even more noticible in ggplot is the iterative process of building a plot, one aspect at a time.</p>
 <p>Let’s demonstrate what ggplot can do with the states data set</p>
@@ -562,7 +561,7 @@ Note: if histogram has n breaks and n is less than 10, it will just use first n 
 <div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb431-1"><a href="week-5--r-continued.html#cb431-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>states, <span class="fu">aes</span>(<span class="at">x=</span>Income, <span class="at">y=</span>Illiteracy, <span class="at">color=</span>Population)) <span class="sc">+</span><span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>)<span class="sc">+</span><span class="fu">theme_classic</span>() </span>
 <span id="cb431-2"><a href="week-5--r-continued.html#cb431-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; `geom_smooth()` using formula &#39;y ~ x&#39;</span></span></code></pre></div>
 <p><img src="Test_files/figure-html/5-18-1.png" width="768" /></p>
-<p>Let’s use the <code>msleep</code> data set to explore what ggplot can do with character vectors. Make a plot of total sleep against REM sleep and then group by “vore.”</p>
+<p>Let’s use the <code>msleep</code> data set to explore what ggplot can do with character vectors. Make a plot of total sleep against REM sleep and then group by “vore”.</p>
 <div class="sourceCode" id="cb432"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb432-1"><a href="week-5--r-continued.html#cb432-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb432-2"><a href="week-5--r-continued.html#cb432-2" aria-hidden="true" tabindex="-1"></a><span class="co"># because our vore vector is a character vector we must convert it to a factor before we can use it to group or color</span></span>
 <span id="cb432-3"><a href="week-5--r-continued.html#cb432-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -628,10 +627,10 @@ Finally in ggplot we may be interested in seeing the mean values plotted with er
 <span id="cb436-5"><a href="week-5--r-continued.html#cb436-5" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">width=</span><span class="fl">0.1</span>), <span class="at">size=</span><span class="fl">0.5</span>)</span></code></pre></div>
 <p><img src="Test_files/figure-html/5-23-1.png" width="768" /></p>
 </div>
-<div id="practice-problems-2.2" class="section level2" number="6.6">
-<h2><span class="header-section-number">6.6</span> Practice Problems 2.2</h2>
+<div id="practice-problems-2.2" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Practice Problems 2.2<a href="week-5--r-continued.html#practice-problems-2.2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
-<h1 id="exercise-2.2-plotting-in-ggplot">Exercise 2.2 Plotting in ggplot</h1>
+<h1 id="exercise-2.2-plotting-in-ggplot" class="hasAnchor">Exercise 2.2 Plotting in ggplot<a href="week-5--r-continued.html#exercise-2.2-plotting-in-ggplot" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 </blockquote>
 <blockquote>
 <ol style="list-style-type: decimal">
@@ -719,16 +718,14 @@ Finally in ggplot we may be interested in seeing the mean values plotted with er
 <span id="cb441-6"><a href="week-5--r-continued.html#cb441-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
 <span id="cb441-7"><a href="week-5--r-continued.html#cb441-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">rainbow</span>(<span class="dv">5</span>))</span>
 <span id="cb441-8"><a href="week-5--r-continued.html#cb441-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: `fun.y` is deprecated. Use `fun` instead.</span></span>
-<span id="cb441-9"><a href="week-5--r-continued.html#cb441-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb441-10"><a href="week-5--r-continued.html#cb441-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: `fun.y` is deprecated. Use `fun` instead.</span></span>
-<span id="cb441-11"><a href="week-5--r-continued.html#cb441-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; geom_path: Each group consists of only one observation. Do you need to</span></span>
-<span id="cb441-12"><a href="week-5--r-continued.html#cb441-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; adjust the group aesthetic?</span></span></code></pre></div>
+<span id="cb441-9"><a href="week-5--r-continued.html#cb441-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; `fun.y` is deprecated. Use `fun` instead.</span></span>
+<span id="cb441-10"><a href="week-5--r-continued.html#cb441-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; geom_path: Each group consists of only one observation. Do you need to adjust the group aesthetic?</span></span></code></pre></div>
 <img src="Test_files/figure-html/5-28-1.png" width="768" />
 </p>
 </details>
 </div>
-<div id="for-loops-and-the-apply-family-of-functions" class="section level2" number="6.7">
-<h2><span class="header-section-number">6.7</span> For loops and the apply family of functions</h2>
+<div id="for-loops-and-the-apply-family-of-functions" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> For loops and the apply family of functions<a href="week-5--r-continued.html#for-loops-and-the-apply-family-of-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A few useful commands: function(), is.na, which, var, length, for(){ },
 points, print, paste, plot, unique, sample</p>
 <p>for loops:
@@ -742,10 +739,10 @@ For example, we could square each number 1 to 10</p>
 <span id="cb442-6"><a href="week-5--r-continued.html#cb442-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]   1   4   9  16  25  36  49  64  81 100</span></span></code></pre></div>
 <p>An alternative to for-loops in R is using the ‘apply’ family, while for-loops apply a function to one item at a time and then go on to the next one, “apply” applies functions to every item at once</p>
 </div>
-<div id="apply-family" class="section level2" number="6.8">
-<h2><span class="header-section-number">6.8</span> apply family</h2>
-<div id="sapply" class="section level3" number="6.8.1">
-<h3><span class="header-section-number">6.8.1</span> sapply</h3>
+<div id="apply-family" class="section level2 hasAnchor" number="6.8">
+<h2><span class="header-section-number">6.8</span> apply family<a href="week-5--r-continued.html#apply-family" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sapply" class="section level3 hasAnchor" number="6.8.1">
+<h3><span class="header-section-number">6.8.1</span> sapply<a href="week-5--r-continued.html#sapply" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>There are several apply functions that vary in the output the return and vary somewhat in the input they require. We’ll go over <strong>sapply</strong> “simplifying” apply which returns a vector, first.</p>
 <div class="sourceCode" id="cb443"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb443-1"><a href="week-5--r-continued.html#cb443-1" aria-hidden="true" tabindex="-1"></a><span class="co">#?sapply </span></span>
 <span id="cb443-2"><a href="week-5--r-continued.html#cb443-2" aria-hidden="true" tabindex="-1"></a><span class="co"># syntax: sapply(X = object_to_repeat_over, FUN = function_to_repeat)</span></span>
@@ -762,29 +759,27 @@ For example, we could square each number 1 to 10</p>
 <span id="cb443-13"><a href="week-5--r-continued.html#cb443-13" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb443-14"><a href="week-5--r-continued.html#cb443-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb443-15"><a href="week-5--r-continued.html#cb443-15" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, areaCircle)</span>
-<span id="cb443-16"><a href="week-5--r-continued.html#cb443-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]   3.141593  12.566371  28.274334  50.265482  78.539816 113.097336</span></span>
-<span id="cb443-17"><a href="week-5--r-continued.html#cb443-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [7] 153.938040 201.061930 254.469005 314.159265</span></span>
-<span id="cb443-18"><a href="week-5--r-continued.html#cb443-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb443-19"><a href="week-5--r-continued.html#cb443-19" aria-hidden="true" tabindex="-1"></a><span class="co"># in R, we can also just use short-hand for simple vector calculations:</span></span>
-<span id="cb443-20"><a href="week-5--r-continued.html#cb443-20" aria-hidden="true" tabindex="-1"></a>pi<span class="sc">*</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb443-21"><a href="week-5--r-continued.html#cb443-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]   3.141593  12.566371  28.274334  50.265482  78.539816 113.097336</span></span>
-<span id="cb443-22"><a href="week-5--r-continued.html#cb443-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [7] 153.938040 201.061930 254.469005 314.159265</span></span>
-<span id="cb443-23"><a href="week-5--r-continued.html#cb443-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb443-24"><a href="week-5--r-continued.html#cb443-24" aria-hidden="true" tabindex="-1"></a><span class="co"># but unlike the short-hand, sapply can also iterate over elements in a list</span></span>
-<span id="cb443-25"><a href="week-5--r-continued.html#cb443-25" aria-hidden="true" tabindex="-1"></a>listy <span class="ot">=</span> <span class="fu">list</span>(<span class="at">a =</span> <span class="cn">TRUE</span>, <span class="at">b =</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>), <span class="at">c =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">100</span>)</span>
-<span id="cb443-26"><a href="week-5--r-continued.html#cb443-26" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(listy) <span class="co"># look at the structure of &#39;listy&#39;</span></span>
-<span id="cb443-27"><a href="week-5--r-continued.html#cb443-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; List of 3</span></span>
-<span id="cb443-28"><a href="week-5--r-continued.html#cb443-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ a: logi TRUE</span></span>
-<span id="cb443-29"><a href="week-5--r-continued.html#cb443-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ b: chr [1:3] &quot;a&quot; &quot;b&quot; &quot;c&quot;</span></span>
-<span id="cb443-30"><a href="week-5--r-continued.html#cb443-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ c: int [1:91] 10 11 12 13 14 15 16 17 18 19 ...</span></span>
-<span id="cb443-31"><a href="week-5--r-continued.html#cb443-31" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(listy) <span class="co"># look at the length of &#39;listy&#39;</span></span>
-<span id="cb443-32"><a href="week-5--r-continued.html#cb443-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3</span></span>
+<span id="cb443-16"><a href="week-5--r-continued.html#cb443-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]   3.141593  12.566371  28.274334  50.265482  78.539816 113.097336 153.938040 201.061930 254.469005 314.159265</span></span>
+<span id="cb443-17"><a href="week-5--r-continued.html#cb443-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb443-18"><a href="week-5--r-continued.html#cb443-18" aria-hidden="true" tabindex="-1"></a><span class="co"># in R, we can also just use short-hand for simple vector calculations:</span></span>
+<span id="cb443-19"><a href="week-5--r-continued.html#cb443-19" aria-hidden="true" tabindex="-1"></a>pi<span class="sc">*</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb443-20"><a href="week-5--r-continued.html#cb443-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]   3.141593  12.566371  28.274334  50.265482  78.539816 113.097336 153.938040 201.061930 254.469005 314.159265</span></span>
+<span id="cb443-21"><a href="week-5--r-continued.html#cb443-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb443-22"><a href="week-5--r-continued.html#cb443-22" aria-hidden="true" tabindex="-1"></a><span class="co"># but unlike the short-hand, sapply can also iterate over elements in a list</span></span>
+<span id="cb443-23"><a href="week-5--r-continued.html#cb443-23" aria-hidden="true" tabindex="-1"></a>listy <span class="ot">=</span> <span class="fu">list</span>(<span class="at">a =</span> <span class="cn">TRUE</span>, <span class="at">b =</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>), <span class="at">c =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">100</span>)</span>
+<span id="cb443-24"><a href="week-5--r-continued.html#cb443-24" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(listy) <span class="co"># look at the structure of &#39;listy&#39;</span></span>
+<span id="cb443-25"><a href="week-5--r-continued.html#cb443-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; List of 3</span></span>
+<span id="cb443-26"><a href="week-5--r-continued.html#cb443-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ a: logi TRUE</span></span>
+<span id="cb443-27"><a href="week-5--r-continued.html#cb443-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ b: chr [1:3] &quot;a&quot; &quot;b&quot; &quot;c&quot;</span></span>
+<span id="cb443-28"><a href="week-5--r-continued.html#cb443-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ c: int [1:91] 10 11 12 13 14 15 16 17 18 19 ...</span></span>
+<span id="cb443-29"><a href="week-5--r-continued.html#cb443-29" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(listy) <span class="co"># look at the length of &#39;listy&#39;</span></span>
+<span id="cb443-30"><a href="week-5--r-continued.html#cb443-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3</span></span>
+<span id="cb443-31"><a href="week-5--r-continued.html#cb443-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb443-32"><a href="week-5--r-continued.html#cb443-32" aria-hidden="true" tabindex="-1"></a><span class="co"># use sapply to return a vector for length of each object within the list</span></span>
 <span id="cb443-33"><a href="week-5--r-continued.html#cb443-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb443-34"><a href="week-5--r-continued.html#cb443-34" aria-hidden="true" tabindex="-1"></a><span class="co"># use sapply to return a vector for length of each object within the list</span></span>
-<span id="cb443-35"><a href="week-5--r-continued.html#cb443-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb443-36"><a href="week-5--r-continued.html#cb443-36" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(listy, <span class="at">FUN =</span> length) </span>
-<span id="cb443-37"><a href="week-5--r-continued.html#cb443-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  a  b  c </span></span>
-<span id="cb443-38"><a href="week-5--r-continued.html#cb443-38" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1  3 91</span></span></code></pre></div>
+<span id="cb443-34"><a href="week-5--r-continued.html#cb443-34" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(listy, <span class="at">FUN =</span> length) </span>
+<span id="cb443-35"><a href="week-5--r-continued.html#cb443-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  a  b  c </span></span>
+<span id="cb443-36"><a href="week-5--r-continued.html#cb443-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1  3 91</span></span></code></pre></div>
 <p>You can also use sapply to create plots! For example, use sapply to plot these 4 dataframes at once:</p>
 <div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb444-1"><a href="week-5--r-continued.html#cb444-1" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">x1 =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">y1 =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
 <span id="cb444-2"><a href="week-5--r-continued.html#cb444-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">x2 =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">y2 =</span> <span class="sc">-</span><span class="dv">1</span><span class="sc">:-</span><span class="dv">10</span>)</span>
@@ -808,8 +803,8 @@ For example, we could square each number 1 to 10</p>
 #&gt; [[4]]
 #&gt; NULL</code></pre>
 </div>
-<div id="apply" class="section level3" number="6.8.2">
-<h3><span class="header-section-number">6.8.2</span> apply</h3>
+<div id="apply" class="section level3 hasAnchor" number="6.8.2">
+<h3><span class="header-section-number">6.8.2</span> apply<a href="week-5--r-continued.html#apply" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The apply function is highly useful for applying a function to rows or columns of a dataframe or matrix.
 Example syntax for the dataframe or matrix X:
 <code>apply(X = over this object, MARGIN 1 for rows or 2 for columns,FUN = apply this function)</code></p>
@@ -830,14 +825,12 @@ Example syntax for the dataframe or matrix X:
 <span id="cb446-14"><a href="week-5--r-continued.html#cb446-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb446-15"><a href="week-5--r-continued.html#cb446-15" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the mean for each column</span></span>
 <span id="cb446-16"><a href="week-5--r-continued.html#cb446-16" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(states, <span class="dv">2</span>, mean)</span>
-<span id="cb446-17"><a href="week-5--r-continued.html#cb446-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Population     Income Illiteracy   Life Exp     Murder    HS Grad      Frost </span></span>
-<span id="cb446-18"><a href="week-5--r-continued.html#cb446-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4246.4200  4435.8000     1.1700    70.8786     7.3780    53.1080   104.4600 </span></span>
-<span id="cb446-19"><a href="week-5--r-continued.html#cb446-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       Area </span></span>
-<span id="cb446-20"><a href="week-5--r-continued.html#cb446-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 70735.8800</span></span>
+<span id="cb446-17"><a href="week-5--r-continued.html#cb446-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Population     Income Illiteracy   Life Exp     Murder    HS Grad      Frost       Area </span></span>
+<span id="cb446-18"><a href="week-5--r-continued.html#cb446-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4246.4200  4435.8000     1.1700    70.8786     7.3780    53.1080   104.4600 70735.8800</span></span>
+<span id="cb446-19"><a href="week-5--r-continued.html#cb446-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb446-20"><a href="week-5--r-continued.html#cb446-20" aria-hidden="true" tabindex="-1"></a><span class="co"># note you could get this with colMeans() or summary(), along with the min and max and other values, but there may be instances where you only want the mean</span></span>
 <span id="cb446-21"><a href="week-5--r-continued.html#cb446-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb446-22"><a href="week-5--r-continued.html#cb446-22" aria-hidden="true" tabindex="-1"></a><span class="co"># note you could get this with colMeans() or summary(), along with the min and max and other values, but there may be instances where you only want the mean</span></span>
-<span id="cb446-23"><a href="week-5--r-continued.html#cb446-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb446-24"><a href="week-5--r-continued.html#cb446-24" aria-hidden="true" tabindex="-1"></a><span class="co"># you could also plot each column against Population in ggplot</span></span></code></pre></div>
+<span id="cb446-22"><a href="week-5--r-continued.html#cb446-22" aria-hidden="true" tabindex="-1"></a><span class="co"># you could also plot each column against Population in ggplot</span></span></code></pre></div>
 <div class="sourceCode" id="cb447"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb447-1"><a href="week-5--r-continued.html#cb447-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(states, <span class="dv">2</span>, <span class="at">FUN =</span> <span class="cf">function</span>(i) <span class="fu">ggplot</span>(states, <span class="fu">aes</span>(<span class="at">x=</span>Population, <span class="at">y =</span> i))<span class="sc">+</span><span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>)<span class="sc">+</span><span class="fu">theme_classic</span>())</span>
 <span id="cb447-2"><a href="week-5--r-continued.html#cb447-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $Population</span></span>
 <span id="cb447-3"><a href="week-5--r-continued.html#cb447-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; `geom_smooth()` using formula &#39;y ~ x&#39;</span></span></code></pre></div>
@@ -873,29 +866,23 @@ Example syntax for the dataframe or matrix X:
 <p>We can do the same things across all rows. But if you want to plot all the rows as we did the columns above, I suggest you do that with a smaller dataset than the states dataframe.</p>
 <div class="sourceCode" id="cb455"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb455-1"><a href="week-5--r-continued.html#cb455-1" aria-hidden="true" tabindex="-1"></a><span class="co">#calculate the sum across each row in states</span></span>
 <span id="cb455-2"><a href="week-5--r-continued.html#cb455-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(states, <span class="dv">1</span>, sum)</span>
-<span id="cb455-3"><a href="week-5--r-continued.html#cb455-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        Alabama         Alaska        Arizona       Arkansas     California </span></span>
-<span id="cb455-4"><a href="week-5--r-continued.html#cb455-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       58094.55      573412.81      120312.25       57620.56      182838.71 </span></span>
-<span id="cb455-5"><a href="week-5--r-continued.html#cb455-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       Colorado    Connecticut       Delaware        Florida        Georgia </span></span>
-<span id="cb455-6"><a href="week-5--r-continued.html#cb455-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      111500.46       13581.68        7604.76       67328.26       67280.04 </span></span>
-<span id="cb455-7"><a href="week-5--r-continued.html#cb455-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;         Hawaii          Idaho       Illinois        Indiana           Iowa </span></span>
-<span id="cb455-8"><a href="week-5--r-continued.html#cb455-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       12399.60       87872.27       72312.94       46121.58       63704.36 </span></span>
-<span id="cb455-9"><a href="week-5--r-continued.html#cb455-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;         Kansas       Kentucky      Louisiana          Maine       Maryland </span></span>
-<span id="cb455-10"><a href="week-5--r-continued.html#cb455-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       88987.58       46964.80       52419.96       35961.49       19544.92 </span></span>
-<span id="cb455-11"><a href="week-5--r-continued.html#cb455-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Massachusetts       Michigan      Minnesota    Mississippi       Missouri </span></span>
-<span id="cb455-12"><a href="week-5--r-continued.html#cb455-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       18632.73       70939.43       88178.46       52908.99       78253.59 </span></span>
-<span id="cb455-13"><a href="week-5--r-continued.html#cb455-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        Montana       Nebraska         Nevada  New Hampshire     New Jersey </span></span>
-<span id="cb455-14"><a href="week-5--r-continued.html#cb455-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      150970.36       82809.40      115962.23       14426.83       20335.73 </span></span>
-<span id="cb455-15"><a href="week-5--r-continued.html#cb455-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     New Mexico       New York North Carolina   North Dakota           Ohio </span></span>
-<span id="cb455-16"><a href="week-5--r-continued.html#cb455-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      126414.42       71027.55       58314.61       75308.28       56527.22 </span></span>
-<span id="cb455-17"><a href="week-5--r-continued.html#cb455-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       Oklahoma         Oregon   Pennsylvania   Rhode Island South Carolina </span></span>
-<span id="cb455-18"><a href="week-5--r-continued.html#cb455-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       75692.52      103308.93       61528.73        6787.00       36860.66 </span></span>
-<span id="cb455-19"><a href="week-5--r-continued.html#cb455-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   South Dakota      Tennessee          Texas           Utah        Vermont </span></span>
-<span id="cb455-20"><a href="week-5--r-continued.html#cb455-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       81102.58       49516.61      278726.70       87603.30       13948.84 </span></span>
-<span id="cb455-21"><a href="week-5--r-continued.html#cb455-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       Virginia     Washington  West Virginia      Wisconsin        Wyoming </span></span>
-<span id="cb455-22"><a href="week-5--r-continued.html#cb455-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       49675.78       75165.12       29705.18       63800.68      102458.69</span></span></code></pre></div>
+<span id="cb455-3"><a href="week-5--r-continued.html#cb455-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        Alabama         Alaska        Arizona       Arkansas     California       Colorado    Connecticut       Delaware </span></span>
+<span id="cb455-4"><a href="week-5--r-continued.html#cb455-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       58094.55      573412.81      120312.25       57620.56      182838.71      111500.46       13581.68        7604.76 </span></span>
+<span id="cb455-5"><a href="week-5--r-continued.html#cb455-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        Florida        Georgia         Hawaii          Idaho       Illinois        Indiana           Iowa         Kansas </span></span>
+<span id="cb455-6"><a href="week-5--r-continued.html#cb455-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       67328.26       67280.04       12399.60       87872.27       72312.94       46121.58       63704.36       88987.58 </span></span>
+<span id="cb455-7"><a href="week-5--r-continued.html#cb455-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       Kentucky      Louisiana          Maine       Maryland  Massachusetts       Michigan      Minnesota    Mississippi </span></span>
+<span id="cb455-8"><a href="week-5--r-continued.html#cb455-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       46964.80       52419.96       35961.49       19544.92       18632.73       70939.43       88178.46       52908.99 </span></span>
+<span id="cb455-9"><a href="week-5--r-continued.html#cb455-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       Missouri        Montana       Nebraska         Nevada  New Hampshire     New Jersey     New Mexico       New York </span></span>
+<span id="cb455-10"><a href="week-5--r-continued.html#cb455-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       78253.59      150970.36       82809.40      115962.23       14426.83       20335.73      126414.42       71027.55 </span></span>
+<span id="cb455-11"><a href="week-5--r-continued.html#cb455-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; North Carolina   North Dakota           Ohio       Oklahoma         Oregon   Pennsylvania   Rhode Island South Carolina </span></span>
+<span id="cb455-12"><a href="week-5--r-continued.html#cb455-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       58314.61       75308.28       56527.22       75692.52      103308.93       61528.73        6787.00       36860.66 </span></span>
+<span id="cb455-13"><a href="week-5--r-continued.html#cb455-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   South Dakota      Tennessee          Texas           Utah        Vermont       Virginia     Washington  West Virginia </span></span>
+<span id="cb455-14"><a href="week-5--r-continued.html#cb455-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       81102.58       49516.61      278726.70       87603.30       13948.84       49675.78       75165.12       29705.18 </span></span>
+<span id="cb455-15"><a href="week-5--r-continued.html#cb455-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      Wisconsin        Wyoming </span></span>
+<span id="cb455-16"><a href="week-5--r-continued.html#cb455-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       63800.68      102458.69</span></span></code></pre></div>
 </div>
-<div id="lapply-list-apply" class="section level3" number="6.8.3">
-<h3><span class="header-section-number">6.8.3</span> lapply – “list” apply</h3>
+<div id="lapply-list-apply" class="section level3 hasAnchor" number="6.8.3">
+<h3><span class="header-section-number">6.8.3</span> lapply – “list” apply<a href="week-5--r-continued.html#lapply-list-apply" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We’ll just show a quick example of lapply. It works in the same way as sapply, but returns a list instead of a vector.</p>
 <div class="sourceCode" id="cb456"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb456-1"><a href="week-5--r-continued.html#cb456-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="cf">function</span>(x)  x<span class="sc">^</span><span class="dv">2</span>) <span class="co"># lapply returns list</span></span>
 <span id="cb456-2"><a href="week-5--r-continued.html#cb456-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [[1]]</span></span>
@@ -960,8 +947,8 @@ Example syntax for the dataframe or matrix X:
 <span id="cb456-61"><a href="week-5--r-continued.html#cb456-61" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="cf">function</span>(x)  x<span class="sc">^</span><span class="dv">2</span>) <span class="co"># default is simplify = TRUE which retuns a vector</span></span>
 <span id="cb456-62"><a href="week-5--r-continued.html#cb456-62" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]   1   4   9  16  25  36  49  64  81 100</span></span></code></pre></div>
 </div>
-<div id="tapply---per-type-apply" class="section level3" number="6.8.4">
-<h3><span class="header-section-number">6.8.4</span> tapply - “per Type” apply</h3>
+<div id="tapply---per-type-apply" class="section level3 hasAnchor" number="6.8.4">
+<h3><span class="header-section-number">6.8.4</span> tapply - “per Type” apply<a href="week-5--r-continued.html#tapply---per-type-apply" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The tapply function is one of my favorites because it is a really great way to sumarize data that has multiple categorical variables that can be</p>
 <div class="sourceCode" id="cb457"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb457-1"><a href="week-5--r-continued.html#cb457-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load state data again, you can skip this if you already have it loaded</span></span>
 <span id="cb457-2"><a href="week-5--r-continued.html#cb457-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(state)</span>
@@ -989,22 +976,17 @@ Example syntax for the dataframe or matrix X:
 <span id="cb457-24"><a href="week-5--r-continued.html#cb457-24" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(states,</span>
 <span id="cb457-25"><a href="week-5--r-continued.html#cb457-25" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span>, <span class="co"># apply over columns of my_states</span></span>
 <span id="cb457-26"><a href="week-5--r-continued.html#cb457-26" aria-hidden="true" tabindex="-1"></a>      <span class="cf">function</span>(x) <span class="fu">tapply</span>(x, state.region, mean)) <span class="co"># each column = variable of interest for tapply</span></span>
-<span id="cb457-27"><a href="week-5--r-continued.html#cb457-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;               Population   Income Illiteracy Life Exp    Murder  HS Grad</span></span>
-<span id="cb457-28"><a href="week-5--r-continued.html#cb457-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Northeast       5495.111 4570.222   1.000000 71.26444  4.722222 53.96667</span></span>
-<span id="cb457-29"><a href="week-5--r-continued.html#cb457-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; South           4208.125 4011.938   1.737500 69.70625 10.581250 44.34375</span></span>
-<span id="cb457-30"><a href="week-5--r-continued.html#cb457-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; North Central   4803.000 4611.083   0.700000 71.76667  5.275000 54.51667</span></span>
-<span id="cb457-31"><a href="week-5--r-continued.html#cb457-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; West            2915.308 4702.615   1.023077 71.23462  7.215385 62.00000</span></span>
-<span id="cb457-32"><a href="week-5--r-continued.html#cb457-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                  Frost      Area</span></span>
-<span id="cb457-33"><a href="week-5--r-continued.html#cb457-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Northeast     132.7778  18141.00</span></span>
-<span id="cb457-34"><a href="week-5--r-continued.html#cb457-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; South          64.6250  54605.12</span></span>
-<span id="cb457-35"><a href="week-5--r-continued.html#cb457-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; North Central 138.8333  62652.00</span></span>
-<span id="cb457-36"><a href="week-5--r-continued.html#cb457-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; West          102.1538 134463.00</span></span></code></pre></div>
+<span id="cb457-27"><a href="week-5--r-continued.html#cb457-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;               Population   Income Illiteracy Life Exp    Murder  HS Grad    Frost      Area</span></span>
+<span id="cb457-28"><a href="week-5--r-continued.html#cb457-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Northeast       5495.111 4570.222   1.000000 71.26444  4.722222 53.96667 132.7778  18141.00</span></span>
+<span id="cb457-29"><a href="week-5--r-continued.html#cb457-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; South           4208.125 4011.938   1.737500 69.70625 10.581250 44.34375  64.6250  54605.12</span></span>
+<span id="cb457-30"><a href="week-5--r-continued.html#cb457-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; North Central   4803.000 4611.083   0.700000 71.76667  5.275000 54.51667 138.8333  62652.00</span></span>
+<span id="cb457-31"><a href="week-5--r-continued.html#cb457-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; West            2915.308 4702.615   1.023077 71.23462  7.215385 62.00000 102.1538 134463.00</span></span></code></pre></div>
 </div>
 </div>
-<div id="exercise-2.3-apply-and-tapply" class="section level2" number="6.9">
-<h2><span class="header-section-number">6.9</span> Exercise 2.3 apply and tapply</h2>
+<div id="exercise-2.3-apply-and-tapply" class="section level2 hasAnchor" number="6.9">
+<h2><span class="header-section-number">6.9</span> Exercise 2.3 apply and tapply<a href="week-5--r-continued.html#exercise-2.3-apply-and-tapply" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
-<h1 id="exercise-2.3">Exercise 2.3</h1>
+<h1 id="exercise-2.3" class="hasAnchor">Exercise 2.3<a href="week-5--r-continued.html#exercise-2.3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 </blockquote>
 <p>A few useful commands: function(){ }, apply(), tapply(), hist(), dim(), prod(), sd()</p>
 <blockquote>
@@ -1025,15 +1007,13 @@ Example syntax for the dataframe or matrix X:
 <span id="cb458-6"><a href="week-5--r-continued.html#cb458-6" aria-hidden="true" tabindex="-1"></a>states <span class="ot">=</span> <span class="fu">as.data.frame</span>(state.x77) <span class="co"># run this line of code to avoid later confusion</span></span>
 <span id="cb458-7"><a href="week-5--r-continued.html#cb458-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb458-8"><a href="week-5--r-continued.html#cb458-8" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(states,<span class="dv">2</span>,mean)</span>
-<span id="cb458-9"><a href="week-5--r-continued.html#cb458-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Population     Income Illiteracy   Life Exp     Murder    HS Grad      Frost </span></span>
-<span id="cb458-10"><a href="week-5--r-continued.html#cb458-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4246.4200  4435.8000     1.1700    70.8786     7.3780    53.1080   104.4600 </span></span>
-<span id="cb458-11"><a href="week-5--r-continued.html#cb458-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       Area </span></span>
-<span id="cb458-12"><a href="week-5--r-continued.html#cb458-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 70735.8800</span></span>
-<span id="cb458-13"><a href="week-5--r-continued.html#cb458-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb458-14"><a href="week-5--r-continued.html#cb458-14" aria-hidden="true" tabindex="-1"></a><span class="co">#or an alternative that will get you only the columns requested</span></span>
-<span id="cb458-15"><a href="week-5--r-continued.html#cb458-15" aria-hidden="true" tabindex="-1"></a><span class="fu">colMeans</span>(states[,<span class="fu">c</span>(<span class="st">&quot;Population&quot;</span>, <span class="st">&quot;Income&quot;</span>, <span class="st">&quot;Area&quot;</span>)])</span>
-<span id="cb458-16"><a href="week-5--r-continued.html#cb458-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Population     Income       Area </span></span>
-<span id="cb458-17"><a href="week-5--r-continued.html#cb458-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    4246.42    4435.80   70735.88</span></span></code></pre></div>
+<span id="cb458-9"><a href="week-5--r-continued.html#cb458-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Population     Income Illiteracy   Life Exp     Murder    HS Grad      Frost       Area </span></span>
+<span id="cb458-10"><a href="week-5--r-continued.html#cb458-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4246.4200  4435.8000     1.1700    70.8786     7.3780    53.1080   104.4600 70735.8800</span></span>
+<span id="cb458-11"><a href="week-5--r-continued.html#cb458-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb458-12"><a href="week-5--r-continued.html#cb458-12" aria-hidden="true" tabindex="-1"></a><span class="co">#or an alternative that will get you only the columns requested</span></span>
+<span id="cb458-13"><a href="week-5--r-continued.html#cb458-13" aria-hidden="true" tabindex="-1"></a><span class="fu">colMeans</span>(states[,<span class="fu">c</span>(<span class="st">&quot;Population&quot;</span>, <span class="st">&quot;Income&quot;</span>, <span class="st">&quot;Area&quot;</span>)])</span>
+<span id="cb458-14"><a href="week-5--r-continued.html#cb458-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Population     Income       Area </span></span>
+<span id="cb458-15"><a href="week-5--r-continued.html#cb458-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    4246.42    4435.80   70735.88</span></span></code></pre></div>
 </p>
 </details>
 <blockquote>
@@ -1259,10 +1239,10 @@ What 10 states should we avoid? # hint use prod(); and maybe order()</li>
 <p>
 <div class="sourceCode" id="cb462"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb462-1"><a href="week-5--r-continued.html#cb462-1" aria-hidden="true" tabindex="-1"></a>livability <span class="ot">&lt;-</span> <span class="fu">apply</span>(states[,<span class="fu">c</span>(<span class="st">&quot;Illiteracy&quot;</span>, <span class="st">&quot;Murder&quot;</span>, <span class="st">&quot;Frost&quot;</span>)], <span class="dv">1</span>, prod) <span class="co"># subset to variables of interest</span></span>
 <span id="cb462-2"><a href="week-5--r-continued.html#cb462-2" aria-hidden="true" tabindex="-1"></a>livability[<span class="fu">order</span>(livability, <span class="at">decreasing =</span> T)][<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>] <span class="co"># top ten least livable states</span></span>
-<span id="cb462-3"><a href="week-5--r-continued.html#cb462-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;         Alaska     New Mexico South Carolina        Georgia       Kentucky </span></span>
-<span id="cb462-4"><a href="week-5--r-continued.html#cb462-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        2576.40        2560.80        1734.20        1668.00        1611.20 </span></span>
-<span id="cb462-5"><a href="week-5--r-continued.html#cb462-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; North Carolina    Mississippi      Tennessee       New York       Michigan </span></span>
-<span id="cb462-6"><a href="week-5--r-continued.html#cb462-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        1598.40        1500.00        1309.00        1251.32        1248.75</span></span></code></pre></div>
+<span id="cb462-3"><a href="week-5--r-continued.html#cb462-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;         Alaska     New Mexico South Carolina        Georgia       Kentucky North Carolina    Mississippi      Tennessee </span></span>
+<span id="cb462-4"><a href="week-5--r-continued.html#cb462-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        2576.40        2560.80        1734.20        1668.00        1611.20        1598.40        1500.00        1309.00 </span></span>
+<span id="cb462-5"><a href="week-5--r-continued.html#cb462-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       New York       Michigan </span></span>
+<span id="cb462-6"><a href="week-5--r-continued.html#cb462-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        1251.32        1248.75</span></span></code></pre></div>
 </p>
 </details>
 <blockquote>
@@ -1285,10 +1265,10 @@ For extra style, title the plot by it’s color, e.g. the red plot is titled �
 <span id="cb464-4"><a href="week-5--r-continued.html#cb464-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(my_colors, <span class="at">FUN =</span> <span class="cf">function</span>(i) <span class="fu">hist</span>(data_to_plot, <span class="at">main =</span> i, <span class="at">col =</span> i))</span></code></pre></div>
 <p><img src="Test_files/figure-html/5-30-1.png" width="768" /></p>
 <pre><code>#&gt;          deeppink       red            blue           darkgreen     
-#&gt; breaks   Integer,6      Integer,6      Integer,6      Integer,6     
-#&gt; counts   Integer,5      Integer,5      Integer,5      Integer,5     
-#&gt; density  Numeric,5      Numeric,5      Numeric,5      Numeric,5     
-#&gt; mids     Numeric,5      Numeric,5      Numeric,5      Numeric,5     
+#&gt; breaks   integer,6      integer,6      integer,6      integer,6     
+#&gt; counts   integer,5      integer,5      integer,5      integer,5     
+#&gt; density  numeric,5      numeric,5      numeric,5      numeric,5     
+#&gt; mids     numeric,5      numeric,5      numeric,5      numeric,5     
 #&gt; xname    &quot;data_to_plot&quot; &quot;data_to_plot&quot; &quot;data_to_plot&quot; &quot;data_to_plot&quot;
 #&gt; equidist TRUE           TRUE           TRUE           TRUE</code></pre>
 </p>
@@ -1318,20 +1298,13 @@ Hint: to standardize a variable, you subtract the mean and divide by the standar
 <span id="cb466-12"><a href="week-5--r-continued.html#cb466-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb466-13"><a href="week-5--r-continued.html#cb466-13" aria-hidden="true" tabindex="-1"></a><span class="co"># standardized</span></span>
 <span id="cb466-14"><a href="week-5--r-continued.html#cb466-14" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(states_standardized)</span>
-<span id="cb466-15"><a href="week-5--r-continued.html#cb466-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;            Population     Income Illiteracy   Life Exp     Murder    HS Grad</span></span>
-<span id="cb466-16"><a href="week-5--r-continued.html#cb466-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Alabama    -0.1414316 -1.3211387   1.525758 -1.3621937  2.0918101 -1.4619293</span></span>
-<span id="cb466-17"><a href="week-5--r-continued.html#cb466-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Alaska     -0.8693980  3.0582456   0.541398 -1.1685098  1.0624293  1.6828035</span></span>
-<span id="cb466-18"><a href="week-5--r-continued.html#cb466-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Arizona    -0.4556891  0.1533029   1.033578 -0.2447866  0.1143154  0.6180514</span></span>
-<span id="cb466-19"><a href="week-5--r-continued.html#cb466-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Arkansas   -0.4785360 -1.7214837   1.197638 -0.1628435  0.7373617 -1.6352611</span></span>
-<span id="cb466-20"><a href="week-5--r-continued.html#cb466-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; California  3.7969790  1.1037155  -0.114842  0.6193415  0.7915396  1.1751891</span></span>
-<span id="cb466-21"><a href="week-5--r-continued.html#cb466-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Colorado   -0.3819965  0.7294092  -0.771082  0.8800698 -0.1565742  1.3361400</span></span>
-<span id="cb466-22"><a href="week-5--r-continued.html#cb466-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                 Frost       Area</span></span>
-<span id="cb466-23"><a href="week-5--r-continued.html#cb466-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Alabama    -1.6248292 -0.2347183</span></span>
-<span id="cb466-24"><a href="week-5--r-continued.html#cb466-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Alaska      0.9145676  5.8093497</span></span>
-<span id="cb466-25"><a href="week-5--r-continued.html#cb466-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Arizona    -1.7210185  0.5002047</span></span>
-<span id="cb466-26"><a href="week-5--r-continued.html#cb466-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Arkansas   -0.7591257 -0.2202212</span></span>
-<span id="cb466-27"><a href="week-5--r-continued.html#cb466-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; California -1.6248292  1.0034903</span></span>
-<span id="cb466-28"><a href="week-5--r-continued.html#cb466-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Colorado    1.1838976  0.3870991</span></span></code></pre></div>
+<span id="cb466-15"><a href="week-5--r-continued.html#cb466-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;            Population     Income Illiteracy   Life Exp     Murder    HS Grad      Frost       Area</span></span>
+<span id="cb466-16"><a href="week-5--r-continued.html#cb466-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Alabama    -0.1414316 -1.3211387   1.525758 -1.3621937  2.0918101 -1.4619293 -1.6248292 -0.2347183</span></span>
+<span id="cb466-17"><a href="week-5--r-continued.html#cb466-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Alaska     -0.8693980  3.0582456   0.541398 -1.1685098  1.0624293  1.6828035  0.9145676  5.8093497</span></span>
+<span id="cb466-18"><a href="week-5--r-continued.html#cb466-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Arizona    -0.4556891  0.1533029   1.033578 -0.2447866  0.1143154  0.6180514 -1.7210185  0.5002047</span></span>
+<span id="cb466-19"><a href="week-5--r-continued.html#cb466-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Arkansas   -0.4785360 -1.7214837   1.197638 -0.1628435  0.7373617 -1.6352611 -0.7591257 -0.2202212</span></span>
+<span id="cb466-20"><a href="week-5--r-continued.html#cb466-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; California  3.7969790  1.1037155  -0.114842  0.6193415  0.7915396  1.1751891 -1.6248292  1.0034903</span></span>
+<span id="cb466-21"><a href="week-5--r-continued.html#cb466-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Colorado   -0.3819965  0.7294092  -0.771082  0.8800698 -0.1565742  1.3361400  1.1838976  0.3870991</span></span></code></pre></div>
 </p>
 </details>
 <blockquote>
@@ -1348,25 +1321,25 @@ Hint: instead of using apply to iterate over the columns themselves, you can oft
 <div class="sourceCode" id="cb467"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb467-1"><a href="week-5--r-continued.html#cb467-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
 <span id="cb467-2"><a href="week-5--r-continued.html#cb467-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="fu">colnames</span>(states), <span class="cf">function</span>(x)<span class="fu">hist</span>(states[ , x],<span class="at">main =</span> x, <span class="at">xlab =</span> x,<span class="at">col =</span> <span class="st">&quot;darkblue&quot;</span>))</span></code></pre></div>
 <p><img src="Test_files/figure-html/5-31-1.png" width="768" /><img src="Test_files/figure-html/5-31-2.png" width="768" /></p>
-<pre><code>#&gt;          Population    Income        Illiteracy    Life Exp     
-#&gt; breaks   Numeric,6     Integer,8     Numeric,6     Integer,8    
-#&gt; counts   Integer,5     Integer,7     Integer,5     Integer,7    
-#&gt; density  Numeric,5     Numeric,7     Numeric,5     Numeric,7    
-#&gt; mids     Numeric,5     Numeric,7     Numeric,5     Numeric,7    
-#&gt; xname    &quot;states[, x]&quot; &quot;states[, x]&quot; &quot;states[, x]&quot; &quot;states[, x]&quot;
-#&gt; equidist TRUE          TRUE          TRUE          TRUE         
-#&gt;          Murder        HS Grad       Frost         Area         
-#&gt; breaks   Numeric,9     Integer,8     Numeric,11    Numeric,7    
-#&gt; counts   Integer,8     Integer,7     Integer,10    Integer,6    
-#&gt; density  Numeric,8     Numeric,7     Numeric,10    Numeric,6    
-#&gt; mids     Numeric,8     Numeric,7     Numeric,10    Numeric,6    
-#&gt; xname    &quot;states[, x]&quot; &quot;states[, x]&quot; &quot;states[, x]&quot; &quot;states[, x]&quot;
-#&gt; equidist TRUE          TRUE          TRUE          TRUE</code></pre>
+<pre><code>#&gt;          Population    Income        Illiteracy    Life Exp      Murder        HS Grad       Frost        
+#&gt; breaks   numeric,6     integer,8     numeric,6     integer,8     numeric,9     integer,8     numeric,11   
+#&gt; counts   integer,5     integer,7     integer,5     integer,7     integer,8     integer,7     integer,10   
+#&gt; density  numeric,5     numeric,7     numeric,5     numeric,7     numeric,8     numeric,7     numeric,10   
+#&gt; mids     numeric,5     numeric,7     numeric,5     numeric,7     numeric,8     numeric,7     numeric,10   
+#&gt; xname    &quot;states[, x]&quot; &quot;states[, x]&quot; &quot;states[, x]&quot; &quot;states[, x]&quot; &quot;states[, x]&quot; &quot;states[, x]&quot; &quot;states[, x]&quot;
+#&gt; equidist TRUE          TRUE          TRUE          TRUE          TRUE          TRUE          TRUE         
+#&gt;          Area         
+#&gt; breaks   numeric,7    
+#&gt; counts   integer,6    
+#&gt; density  numeric,6    
+#&gt; mids     numeric,6    
+#&gt; xname    &quot;states[, x]&quot;
+#&gt; equidist TRUE</code></pre>
 </p>
 </details>
 </div>
-<div id="creature-of-the-week-4" class="section level2" number="6.10">
-<h2><span class="header-section-number">6.10</span> Creature of the Week!</h2>
+<div id="creature-of-the-week-4" class="section level2 hasAnchor" number="6.10">
+<h2><span class="header-section-number">6.10</span> Creature of the Week!<a href="week-5--r-continued.html#creature-of-the-week-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="figure">
 <img src="figs/creatures/wobbegong.jpg" alt="" />
 <p class="caption">Juvenile Banded Wobbegong, photo © Grey McNeil</p>

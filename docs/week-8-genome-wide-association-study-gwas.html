@@ -4,24 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>9 Week 8: Genome wide association study (GWAS) | Week 10 wrap up</title>
-  <meta name="description" content="9 Week 8: Genome wide association study (GWAS) | Week 10 wrap up" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <title>9 Week 8: Genome wide association study (GWAS) | Test.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="9 Week 8: Genome wide association study (GWAS) | Week 10 wrap up" />
+  <meta property="og:title" content="9 Week 8: Genome wide association study (GWAS) | Test.knit" />
   <meta property="og:type" content="book" />
-  
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="9 Week 8: Genome wide association study (GWAS) | Week 10 wrap up" />
+  <meta name="twitter:title" content="9 Week 8: Genome wide association study (GWAS) | Test.knit" />
   
   
   
 
-<meta name="author" content="Serena Caplins" />
+<meta name="author" content="" />
 
 
 
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="week-7--fst-and-outlier-analysis.html"/>
 <link rel="next" href="week-9--population-structure-using-ngsadmix.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -303,7 +302,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Week 10 wrap up</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
           </h1>
         </div>
 
@@ -311,12 +310,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-8-genome-wide-association-study-gwas" class="section level1" number="9">
-<h1><span class="header-section-number">9</span> Week 8: Genome wide association study (GWAS)</h1>
+<div id="week-8-genome-wide-association-study-gwas" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> Week 8: Genome wide association study (GWAS)<a href="week-8-genome-wide-association-study-gwas.html#week-8-genome-wide-association-study-gwas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This week we’re going to show you how to perform a genome wide association study or GWAS.</p>
 <p>The lecture for this week can be found <a href="https://github.com/BayLab/MarineGenomics/blob/4f22a87ad800f98a6e138a166b8e94d016310914/ppt/Week8_GWAS.pdf">here</a></p>
-<div id="load-in-the-data" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> load in the data</h2>
+<div id="load-in-the-data" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> load in the data<a href="week-8-genome-wide-association-study-gwas.html#load-in-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The data for this week consist of several files in beagle format, a genome index file (.fai), and a few small text files.</p>
 <div class="sourceCode" id="cb506"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb506-1"><a href="week-8-genome-wide-association-study-gwas.html#cb506-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb506-2"><a href="week-8-genome-wide-association-study-gwas.html#cb506-2" aria-hidden="true" tabindex="-1"></a>wget https://raw.githubusercontent.com/BayLab/MarineGenomicsData/main/week8.tar.gz</span>
@@ -330,17 +329,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb506-10"><a href="week-8-genome-wide-association-study-gwas.html#cb506-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb506-11"><a href="week-8-genome-wide-association-study-gwas.html#cb506-11" aria-hidden="true" tabindex="-1"></a>wget https://raw.githubusercontent.com/BayLab/MarineGenomicsData/main/salmon_chr6_19ind.BEAGLE.PL.gz</span></code></pre></div>
 </div>
-<div id="install-packages-in-r" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> install packages in R</h2>
+<div id="install-packages-in-r" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> install packages in R<a href="week-8-genome-wide-association-study-gwas.html#install-packages-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We’ll be using the package <code>qqman</code> to make a manhattan plot.</p>
 <div class="sourceCode" id="cb507"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb507-1"><a href="week-8-genome-wide-association-study-gwas.html#cb507-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb507-2"><a href="week-8-genome-wide-association-study-gwas.html#cb507-2" aria-hidden="true" tabindex="-1"></a><span class="co">#install.package(&quot;qqman&quot;)</span></span></code></pre></div>
 </div>
-<div id="install-angsd-and-pcangsd-again" class="section level2" number="9.3">
-<h2><span class="header-section-number">9.3</span> install angsd and pcangsd (again?)</h2>
+<div id="install-angsd-and-pcangsd-again" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> install angsd and pcangsd (again?)<a href="week-8-genome-wide-association-study-gwas.html#install-angsd-and-pcangsd-again" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you missed week 6 and didn’t get pcangsd or angsd(week 3) installed. Here are the scripts to install them.They take a few minutes to install. There is no need to install these again if you installed them last time.</p>
-<div id="install-angsd" class="section level3" number="9.3.1">
-<h3><span class="header-section-number">9.3.1</span> install angsd</h3>
+<div id="install-angsd" class="section level3 hasAnchor" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> install angsd<a href="week-8-genome-wide-association-study-gwas.html#install-angsd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb508"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb508-1"><a href="week-8-genome-wide-association-study-gwas.html#cb508-1" aria-hidden="true" tabindex="-1"></a>cd</span>
 <span id="cb508-2"><a href="week-8-genome-wide-association-study-gwas.html#cb508-2" aria-hidden="true" tabindex="-1"></a>  git clone --recursive https://github.com/samtools/htslib.git</span>
 <span id="cb508-3"><a href="week-8-genome-wide-association-study-gwas.html#cb508-3" aria-hidden="true" tabindex="-1"></a>  git clone https://github.com/ANGSD/angsd.git </span>
@@ -348,8 +347,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb508-5"><a href="week-8-genome-wide-association-study-gwas.html#cb508-5" aria-hidden="true" tabindex="-1"></a>   </span>
 <span id="cb508-6"><a href="week-8-genome-wide-association-study-gwas.html#cb508-6" aria-hidden="true" tabindex="-1"></a>cd</span></code></pre></div>
 </div>
-<div id="for-pcangsd" class="section level3" number="9.3.2">
-<h3><span class="header-section-number">9.3.2</span> for pcangsd</h3>
+<div id="for-pcangsd" class="section level3 hasAnchor" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> for pcangsd<a href="week-8-genome-wide-association-study-gwas.html#for-pcangsd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb509"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb509-1"><a href="week-8-genome-wide-association-study-gwas.html#cb509-1" aria-hidden="true" tabindex="-1"></a>install pip for python</span>
 <span id="cb509-2"><a href="week-8-genome-wide-association-study-gwas.html#cb509-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb509-3"><a href="week-8-genome-wide-association-study-gwas.html#cb509-3" aria-hidden="true" tabindex="-1"></a>curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</span>
@@ -365,18 +364,18 @@ look at path echo $PATH</p>
 <span id="cb511-4"><a href="week-8-genome-wide-association-study-gwas.html#cb511-4" aria-hidden="true" tabindex="-1"></a>python3 setup.py build_ext --inplace</span></code></pre></div>
 </div>
 </div>
-<div id="the-data" class="section level2" number="9.4">
-<h2><span class="header-section-number">9.4</span> The data</h2>
+<div id="the-data" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> The data<a href="week-8-genome-wide-association-study-gwas.html#the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The data we’re working on for the GWAS comes from the paper by Kijas et al. 2018 where they studied the genetic basis of sex determination in the atlantic Salmon. The paper can be found <a href="https://www.nature.com/articles/s41598-018-23984-1#Sec2">here</a>. In short they examined the genetic basis of sex in 19 salmon for which they have whole genome sequence data. We’ll only be looking at two chromosomes (2 and 6) of this data.</p>
 </div>
-<div id="take-beagle-file-and-generate-lrt-file" class="section level2" number="9.5">
-<h2><span class="header-section-number">9.5</span> take Beagle file and generate lrt file</h2>
+<div id="take-beagle-file-and-generate-lrt-file" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> take Beagle file and generate lrt file<a href="week-8-genome-wide-association-study-gwas.html#take-beagle-file-and-generate-lrt-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To do the test of genome wide association we need to take our Beagle file and test whether there is an association with our phenotype (in this case whether a fish has a male or female phenotype). The phenotypes are coded as 0 = Female and 1 = Male in the <code>phenobin</code> file.</p>
 <div class="sourceCode" id="cb512"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb512-1"><a href="week-8-genome-wide-association-study-gwas.html#cb512-1" aria-hidden="true" tabindex="-1"></a>$HOME/angsd/angsd -doMaf 4 -beagle salmon_chr2_19ind.BEAGLE.PL.gz -yBin phenobin -doAsso 2 -fai Salmon.fai</span></code></pre></div>
 <p>This will generate several output files labeled <code>angsdput</code>. We’ll use the file with the lrt0 extension to plot our manattan plot.</p>
 </div>
-<div id="take-lrt-file-and-make-a-manhattan-plot" class="section level2" number="9.6">
-<h2><span class="header-section-number">9.6</span> take lrt file and make a manhattan plot</h2>
+<div id="take-lrt-file-and-make-a-manhattan-plot" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> take lrt file and make a manhattan plot<a href="week-8-genome-wide-association-study-gwas.html#take-lrt-file-and-make-a-manhattan-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="sourceCode" id="cb513"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb513-1"><a href="week-8-genome-wide-association-study-gwas.html#cb513-1" aria-hidden="true" tabindex="-1"></a><span class="co">#in R</span></span>
 <span id="cb513-2"><a href="week-8-genome-wide-association-study-gwas.html#cb513-2" aria-hidden="true" tabindex="-1"></a><span class="co">#set working directory</span></span>
 <span id="cb513-3"><a href="week-8-genome-wide-association-study-gwas.html#cb513-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -418,7 +417,7 @@ look at path echo $PATH</p>
 <p><img src="Test_files/figure-html/8-1-1.png" width="768" /></p>
 <p>Everything looks good to proceed to making our manhattan plot.</p>
 <div class="sourceCode" id="cb516"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb516-1"><a href="week-8-genome-wide-association-study-gwas.html#cb516-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span> (qqman)</span></code></pre></div>
-<p>the function manhattan requires each SNP to have it’s own “name.” Let’s make a vector for rownumbers that start with the letter r. We also need to convert our LRT values to pvalues. We’ll use the command <code>dchisq</code> to get pvalues.</p>
+<p>the function manhattan requires each SNP to have it’s own “name”. Let’s make a vector for rownumbers that start with the letter r. We also need to convert our LRT values to pvalues. We’ll use the command <code>dchisq</code> to get pvalues.</p>
 <div class="sourceCode" id="cb517"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb517-1"><a href="week-8-genome-wide-association-study-gwas.html#cb517-1" aria-hidden="true" tabindex="-1"></a>lrt_filt<span class="sc">$</span>SNP<span class="ot">&lt;-</span><span class="fu">paste</span>(<span class="st">&quot;r&quot;</span>,<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(lrt_filt<span class="sc">$</span>Chromosome), <span class="at">sep=</span><span class="st">&quot;&quot;</span>)</span>
 <span id="cb517-2"><a href="week-8-genome-wide-association-study-gwas.html#cb517-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb517-3"><a href="week-8-genome-wide-association-study-gwas.html#cb517-3" aria-hidden="true" tabindex="-1"></a><span class="co">#we also need to make sure we don&#39;t have any tricky values like those below</span></span>
@@ -477,8 +476,8 @@ look at path echo $PATH</p>
 <p>These results highlight the fluid nature of sex determination in animals, even those with a genetic basis to sex determination.</p>
 <p>For the exercise you’ll take a closer look at chromosome 6, where you’ll try to find the individuals that are male from a PCA plot.</p>
 </div>
-<div id="exercises-1" class="section level2" number="9.7">
-<h2><span class="header-section-number">9.7</span> Exercises</h2>
+<div id="exercises-1" class="section level2 hasAnchor" number="9.7">
+<h2><span class="header-section-number">9.7</span> Exercises<a href="week-8-genome-wide-association-study-gwas.html#exercises-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p>1.For this exercise, we want to see which individuals actually show genomic levels of variation at chromosome 6. Using the code that we ran for week 6. Make a PCA plot of the salmon_chr3_19ind.BEAGLE.PL.gz file. Use the function <code>indentify()</code> to find the points that are clustering apart from the other points. Verify that these are males by referring to the table in the Kijas et al. paper <a href="https://www.nature.com/articles/s41598-018-23984-1/tables/1">here</a>. Note their individuals are in the same order as our samples though the names don’t match.</p>
 </blockquote>
@@ -499,12 +498,11 @@ look at path echo $PATH</p>
 <span id="cb526-7"><a href="week-8-genome-wide-association-study-gwas.html#cb526-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb526-8"><a href="week-8-genome-wide-association-study-gwas.html#cb526-8" aria-hidden="true" tabindex="-1"></a><span class="co">#how much variation are we explaining here?</span></span>
 <span id="cb526-9"><a href="week-8-genome-wide-association-study-gwas.html#cb526-9" aria-hidden="true" tabindex="-1"></a>e<span class="sc">$</span>values<span class="sc">/</span><span class="fu">sum</span>(e<span class="sc">$</span>values)</span>
-<span id="cb526-10"><a href="week-8-genome-wide-association-study-gwas.html#cb526-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]  0.1379496011  0.1246126748  0.0969103029  0.0920252715  0.0774570788</span></span>
-<span id="cb526-11"><a href="week-8-genome-wide-association-study-gwas.html#cb526-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [6]  0.0685079248  0.0605808079  0.0554445095  0.0493884028  0.0444119246</span></span>
-<span id="cb526-12"><a href="week-8-genome-wide-association-study-gwas.html#cb526-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [11]  0.0423030396  0.0368221717  0.0329494215  0.0316195242  0.0269138675</span></span>
-<span id="cb526-13"><a href="week-8-genome-wide-association-study-gwas.html#cb526-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [16]  0.0184940705  0.0149661517 -0.0006450986 -0.0107116466</span></span>
-<span id="cb526-14"><a href="week-8-genome-wide-association-study-gwas.html#cb526-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb526-15"><a href="week-8-genome-wide-association-study-gwas.html#cb526-15" aria-hidden="true" tabindex="-1"></a><span class="co">#looks like 13.7% is explained by the first axis</span></span></code></pre></div>
+<span id="cb526-10"><a href="week-8-genome-wide-association-study-gwas.html#cb526-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]  0.1379496011  0.1246126748  0.0969103029  0.0920252715  0.0774570788  0.0685079248  0.0605808079  0.0554445095</span></span>
+<span id="cb526-11"><a href="week-8-genome-wide-association-study-gwas.html#cb526-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [9]  0.0493884028  0.0444119246  0.0423030396  0.0368221717  0.0329494215  0.0316195242  0.0269138675  0.0184940705</span></span>
+<span id="cb526-12"><a href="week-8-genome-wide-association-study-gwas.html#cb526-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [17]  0.0149661517 -0.0006450986 -0.0107116466</span></span>
+<span id="cb526-13"><a href="week-8-genome-wide-association-study-gwas.html#cb526-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb526-14"><a href="week-8-genome-wide-association-study-gwas.html#cb526-14" aria-hidden="true" tabindex="-1"></a><span class="co">#looks like 13.7% is explained by the first axis</span></span></code></pre></div>
 <div class="sourceCode" id="cb527"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb527-1"><a href="week-8-genome-wide-association-study-gwas.html#cb527-1" aria-hidden="true" tabindex="-1"></a><span class="co">#make a plot of the first two axes</span></span>
 <span id="cb527-2"><a href="week-8-genome-wide-association-study-gwas.html#cb527-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(e<span class="sc">$</span>vectors[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>])</span></code></pre></div>
 <p><img src="Test_files/figure-html/8-5-1.png" width="768" /></p>
@@ -572,8 +570,8 @@ look at path echo $PATH</p>
 </p>
 </details>
 </div>
-<div id="creature-of-the-week-7" class="section level2" number="9.8">
-<h2><span class="header-section-number">9.8</span> Creature of the Week!</h2>
+<div id="creature-of-the-week-7" class="section level2 hasAnchor" number="9.8">
+<h2><span class="header-section-number">9.8</span> Creature of the Week!<a href="week-8-genome-wide-association-study-gwas.html#creature-of-the-week-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="figure">
 <img src="figs/creatures/mantisshrimp.png" alt="" />
 <p class="caption">The lovely Mantis Shrimp (image credit: Dorothea OLDANI,Unsplash)</p>

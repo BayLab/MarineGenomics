@@ -4,24 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Week 3- What is a Genetic Variant? | Week 10 wrap up</title>
-  <meta name="description" content="4 Week 3- What is a Genetic Variant? | Week 10 wrap up" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <title>4 Week 3- What is a Genetic Variant? | Test.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Week 3- What is a Genetic Variant? | Week 10 wrap up" />
+  <meta property="og:title" content="4 Week 3- What is a Genetic Variant? | Test.knit" />
   <meta property="og:type" content="book" />
-  
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Week 3- What is a Genetic Variant? | Week 10 wrap up" />
+  <meta name="twitter:title" content="4 Week 3- What is a Genetic Variant? | Test.knit" />
   
   
   
 
-<meta name="author" content="Serena Caplins" />
+<meta name="author" content="" />
 
 
 
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="week-2-working-with-files.html"/>
 <link rel="next" href="week-4--the-r-environment.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -303,7 +302,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Week 10 wrap up</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
           </h1>
         </div>
 
@@ -311,11 +310,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-3--what-is-a-genetic-variant" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Week 3- What is a Genetic Variant?</h1>
+<div id="week-3--what-is-a-genetic-variant" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Week 3- What is a Genetic Variant?<a href="week-3--what-is-a-genetic-variant.html#week-3--what-is-a-genetic-variant" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>You’ll find the lecture discussing the definition and identification of genetic variation <a href="https://github.com/BayLab/MarineGenomics/blob/0e7ead526047e02518c33d01e3a6c88d6a3068a3/ppt/MarineGenomics_Lecture3.pdf">here</a></p>
-<div id="to-get-started-lets-dowload-the-data-and-install-a-few-programs" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> To get started lets dowload the data and install a few programs</h2>
+<div id="to-get-started-lets-dowload-the-data-and-install-a-few-programs" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> To get started lets dowload the data and install a few programs<a href="week-3--what-is-a-genetic-variant.html#to-get-started-lets-dowload-the-data-and-install-a-few-programs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Download the data from the MarineGenomicsData repository on git hub. We’ll be working in the Week_3 folder</p>
 <div class="sourceCode" id="cb174"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb174-1"><a href="week-3--what-is-a-genetic-variant.html#cb174-1" aria-hidden="true" tabindex="-1"></a>wget https://raw.githubusercontent.com/BayLab/MarineGenomicsData/main/week3_quarter.tar.gz</span>
 <span id="cb174-2"><a href="week-3--what-is-a-genetic-variant.html#cb174-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -343,8 +342,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb177-2"><a href="week-3--what-is-a-genetic-variant.html#cb177-2" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
 <p>Change directories to the one that has the data MarineGenomicsData/Week3. If you <code>ls</code> into this directory you should see 6 files with a <code>.fastq.gz</code> extension and 1 tiny genome file with a <code>.fna.gz</code> extension.</p>
 </div>
-<div id="raw-read-quality-control" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Raw read quality control</h2>
+<div id="raw-read-quality-control" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Raw read quality control<a href="week-3--what-is-a-genetic-variant.html#raw-read-quality-control" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Next let’s use the program fastqc to check the quality of our data files</p>
 <div class="sourceCode" id="cb178"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb178-1"><a href="week-3--what-is-a-genetic-variant.html#cb178-1" aria-hidden="true" tabindex="-1"></a>$ fastqc SRR6805880.tiny.fastq.gz</span></code></pre></div>
 <ul>
@@ -367,8 +366,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>You’ll see you initially get an error message because fastqc doesn’t see the .fastq file extension on some of our files. It simply skips these and moves on the the next file.</p>
 <p>To view the output of fastqc, we’ll minimize our terminal and look at our <code>Home</code> folder on our jetstream desktop. This is the same home directory that we’ve been working in through the terminal. Go to the directory where you were running fastqc and find an .html file. Double click it and it should open a web browser with the output data. We’ll go over how to interpret this file in class.</p>
 </div>
-<div id="trimming-to-remove-adapters" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Trimming to remove adapters</h2>
+<div id="trimming-to-remove-adapters" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Trimming to remove adapters<a href="week-3--what-is-a-genetic-variant.html#trimming-to-remove-adapters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are many programs to trim sequence files. We’ll use the same paper that was used in the Xuereb et al. 2018 paper [here]. Cutadapt is relatively easy to run with the code below, once we have identified our adaptor sequence and takes the general form below.</p>
 <div class="sourceCode" id="cb181"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb181-1"><a href="week-3--what-is-a-genetic-variant.html#cb181-1" aria-hidden="true" tabindex="-1"></a>$ cutadapt -g SEQUENCETOTRIM -o name_of_input_file name_of_output_file </span></code></pre></div>
 <p>Let’s do this on one of our files to test it out.</p>
@@ -388,16 +387,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb184"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb184-1"><a href="week-3--what-is-a-genetic-variant.html#cb184-1" aria-hidden="true" tabindex="-1"></a>ls *trimmed*</span></code></pre></div>
 <p>Our reads are now ready to be mapped to the genome.</p>
 </div>
-<div id="building-an-index-of-our-genome" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Building an index of our genome</h2>
+<div id="building-an-index-of-our-genome" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Building an index of our genome<a href="week-3--what-is-a-genetic-variant.html#building-an-index-of-our-genome" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>First we have to index our genome. We’ll do that with the bowtie2-build command. This will generate a lot of files that describe different aspects of our genome</p>
 <p>We give bowtie2-build two things, the name of our genome, and a general name to label the output files. I always keep the name of the output files the same as the original genome file (without the .fna.gz extension) to avoid confusion (what’s this file for?).</p>
 <div class="sourceCode" id="cb185"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb185-1"><a href="week-3--what-is-a-genetic-variant.html#cb185-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb185-2"><a href="week-3--what-is-a-genetic-variant.html#cb185-2" aria-hidden="true" tabindex="-1"></a>bowtie2-build Ppar_tinygenome.fna.gz Ppar_tinygenome</span></code></pre></div>
 <p>This should produce several output files with extensions including: .bt2 and rev.1.bt2 etc (six files in total)</p>
 </div>
-<div id="map-reads-to-the-genome" class="section level2" number="4.5">
-<h2><span class="header-section-number">4.5</span> Map reads to the genome</h2>
+<div id="map-reads-to-the-genome" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Map reads to the genome<a href="week-3--what-is-a-genetic-variant.html#map-reads-to-the-genome" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s map those reads using a for loop</p>
 <div class="sourceCode" id="cb186"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb186-1"><a href="week-3--what-is-a-genetic-variant.html#cb186-1" aria-hidden="true" tabindex="-1"></a>for filename in *.tiny_trimmed.fastq.gz</span>
 <span id="cb186-2"><a href="week-3--what-is-a-genetic-variant.html#cb186-2" aria-hidden="true" tabindex="-1"></a>do</span>
@@ -412,8 +411,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>You’ll also notice that we have made a bunch of .sam files. THis stands for Sequence Alignment Map file. Let’s use <code>less</code> to look at one of these files using <code>less</code></p>
 <p>There are several columns of data in a sam file</p>
 </div>
-<div id="sam-to-bam-file-conversion" class="section level2" number="4.6">
-<h2><span class="header-section-number">4.6</span> sam to bam file conversion</h2>
+<div id="sam-to-bam-file-conversion" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> sam to bam file conversion<a href="week-3--what-is-a-genetic-variant.html#sam-to-bam-file-conversion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The next step is to convert our sam file to a bam (Binary Alignment Map file). This gets our file ready to be read by angsd the program we’re going to use to call SNPs.</p>
 <div class="sourceCode" id="cb187"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb187-1"><a href="week-3--what-is-a-genetic-variant.html#cb187-1" aria-hidden="true" tabindex="-1"></a>for filename in *.sam</span>
 <span id="cb187-2"><a href="week-3--what-is-a-genetic-variant.html#cb187-2" aria-hidden="true" tabindex="-1"></a>do</span>
@@ -425,9 +424,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb187-8"><a href="week-3--what-is-a-genetic-variant.html#cb187-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb187-9"><a href="week-3--what-is-a-genetic-variant.html#cb187-9" aria-hidden="true" tabindex="-1"></a>done</span></code></pre></div>
 </div>
-<div id="genotype-likelihoods" class="section level2" number="4.7">
-<h2><span class="header-section-number">4.7</span> Genotype likelihoods</h2>
-<p>There are many ways and many programs that call genotypes. The program that we will use calculates genotype likelihoods, which account for uncertainty due to sequencing errors and/or mapping errors and is one of several programs in the package ANGSD. The purpose of this class is not to discuss which program is the “best,” but to teach you to use some commonly used programs.</p>
+<div id="genotype-likelihoods" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> Genotype likelihoods<a href="week-3--what-is-a-genetic-variant.html#genotype-likelihoods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are many ways and many programs that call genotypes. The program that we will use calculates genotype likelihoods, which account for uncertainty due to sequencing errors and/or mapping errors and is one of several programs in the package ANGSD. The purpose of this class is not to discuss which program is the “best”, but to teach you to use some commonly used programs.</p>
 <p>angsd needs a text file with the <code>.bam</code> file names listed. We can make that by running the command below</p>
 <div class="sourceCode" id="cb188"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb188-1"><a href="week-3--what-is-a-genetic-variant.html#cb188-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb188-2"><a href="week-3--what-is-a-genetic-variant.html#cb188-2" aria-hidden="true" tabindex="-1"></a>ls *.bam &gt; bam.filelist</span></code></pre></div>
@@ -438,7 +437,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb190-2"><a href="week-3--what-is-a-genetic-variant.html#cb190-2" aria-hidden="true" tabindex="-1"></a>../../angsd/angsd -bam bam.filelist -GL 1 -out genotype_likelihoods -doMaf 2 -SNP_pval 1e-2 -doMajorMinor 1</span></code></pre></div>
 <p>This will generate two files, one with a .arg extension, this has a record of the script we ran to generate the output, and a .maf file that will give you the minor allele frequencies and is the main output file. If you see these two files, Yay!! We did it!</p>
 <blockquote>
-<h3 id="suggested-exercises">Suggested Exercises</h3>
+<h3 id="suggested-exercises" class="hasAnchor">Suggested Exercises<a href="week-3--what-is-a-genetic-variant.html#suggested-exercises" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </blockquote>
 <blockquote>
 <p>For our coding session you can re-run through the above code as it is written. You can also do the below suggestions to extend or modify what we did in Tuesdays class.</p>
@@ -571,8 +570,8 @@ Much more organized!</p>
 </details>
 <p> </p>
 </div>
-<div id="creature-of-the-week-2" class="section level2" number="4.8">
-<h2><span class="header-section-number">4.8</span> Creature of the Week!</h2>
+<div id="creature-of-the-week-2" class="section level2 hasAnchor" number="4.8">
+<h2><span class="header-section-number">4.8</span> Creature of the Week!<a href="week-3--what-is-a-genetic-variant.html#creature-of-the-week-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="figure">
 <img src="figs/creatures/sea_cucumber.jpg" alt="" />
 <p class="caption">Sea Cucumber relaxing on a rock (photo by Seattle Aquarium)</p>

@@ -4,24 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Week 7- Fst and outlier analysis | Week 10 wrap up</title>
-  <meta name="description" content="8 Week 7- Fst and outlier analysis | Week 10 wrap up" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <title>8 Week 7- Fst and outlier analysis | Test.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 Week 7- Fst and outlier analysis | Week 10 wrap up" />
+  <meta property="og:title" content="8 Week 7- Fst and outlier analysis | Test.knit" />
   <meta property="og:type" content="book" />
-  
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Week 7- Fst and outlier analysis | Week 10 wrap up" />
+  <meta name="twitter:title" content="8 Week 7- Fst and outlier analysis | Test.knit" />
   
   
   
 
-<meta name="author" content="Serena Caplins" />
+<meta name="author" content="" />
 
 
 
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="week-6--principle-component-analyses.html"/>
 <link rel="next" href="week-8-genome-wide-association-study-gwas.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -303,7 +302,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Week 10 wrap up</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
           </h1>
         </div>
 
@@ -311,13 +310,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-7--fst-and-outlier-analysis" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> Week 7- F<sub>st</sub> and outlier analysis</h1>
+<div id="week-7--fst-and-outlier-analysis" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Week 7- F<sub>st</sub> and outlier analysis<a href="week-7--fst-and-outlier-analysis.html#week-7--fst-and-outlier-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The lecture for this week focused on *F<sub>st</sub>** and outlier analysis can be found <a href="https://github.com/BayLab/MarineGenomics/blob/main/ppt/Week7.pdf">here</a>.</p>
 <p>Last week we used PCA to take a broad look at whether populations were genetically distinct. This week we learn how to identify particular SNPs that are driving patterns of divergence between populations. These SNPs could represent signals of selection.</p>
 <p>We will import the data and take a first look in <strong>bash</strong> and then we will do analysis and generate the plots in <strong>RStudio</strong>.</p>
-<div id="download-the-data-1" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Download the data</h2>
+<div id="download-the-data-1" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Download the data<a href="week-7--fst-and-outlier-analysis.html#download-the-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We first need to download the data. Use the link below to download it to jetstream, and then us the tar command to un-compress it.</p>
 <div class="sourceCode" id="cb482"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb482-1"><a href="week-7--fst-and-outlier-analysis.html#cb482-1" aria-hidden="true" tabindex="-1"></a>wget https://raw.githubusercontent.com/BayLab/MarineGenomicsData/main/week7.tar.gz</span>
 <span id="cb482-2"><a href="week-7--fst-and-outlier-analysis.html#cb482-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -329,17 +328,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb483-3"><a href="week-7--fst-and-outlier-analysis.html#cb483-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb483-4"><a href="week-7--fst-and-outlier-analysis.html#cb483-4" aria-hidden="true" tabindex="-1"></a>head filtered_3699snps_californicus.vcf</span></code></pre></div>
 </div>
-<div id="getting-r-set-up" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Getting R set up</h2>
+<div id="getting-r-set-up" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Getting R set up<a href="week-7--fst-and-outlier-analysis.html#getting-r-set-up" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now move off of Terminal and open R Studio. The first thing we need to do is download a few different packages. You only need to do this the first time you use each package on your machine.</p>
 <p>Today we will be using two different packages: <strong>pcadapt</strong> and <strong>OutFLANK</strong> and both of them have some other packages they need (dependencies). While many packages can be downloaded in R using the <code>install.packages</code> function, some cannot because they are stored in specialty repositories. You can see that pcadapt can be downloaded from CRAN using the standard command, but OutFLANK and qvalue need to be downloaded from other sources.</p>
 <p>To save all of the progress we make today, first create your own script in the Week7 folder for this week named “Week7Script.R”</p>
 <p>If you have an error reading “Warning in install.packages :
-package ?BiocManager? is not available for this version of R” Go to “Help,” then “Check for Updates” and update your R version. You also may need to restart your R.</p>
+package ?BiocManager? is not available for this version of R” Go to “Help”, then “Check for Updates” and update your R version. You also may need to restart your R.</p>
 <p>After you have successfully downloaded all the packages needed for today, go ahead and get a new R script started. Remember to do lots of commenting with <code>#</code> so it is easy to come back to your code later!</p>
 </div>
-<div id="finding-outliers-using-pcadapt" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> Finding outliers using pcadapt</h2>
+<div id="finding-outliers-using-pcadapt" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Finding outliers using pcadapt<a href="week-7--fst-and-outlier-analysis.html#finding-outliers-using-pcadapt" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Today we will use two different methods to find outliers. The first is based on PCA, which you learned about last week. For this you will use the <strong>pcadapt</strong> package. We will just use a few functions, but you can do a lot with this package; the documentation is found <a href="https://bcm-uga.github.io/pcadapt/articles/pcadapt.html#:~:text=pcadapt%20has%20been%20developed%20to,Principal%20Component%20Analysis%20(PCA).&amp;text=A%20total%20of%20150%20individuals,genotyped%20at%201%2C500%20diploid%20markers.">here</a></p>
 <p>I always like to call the different R packages I plan to use at the very top of the script so I just have to call them once:</p>
 <div class="sourceCode" id="cb484"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb484-1"><a href="week-7--fst-and-outlier-analysis.html#cb484-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pcadapt)</span>
@@ -350,7 +349,7 @@ package ?BiocManager? is not available for this version of R” Go to “Help,�
 #&gt; Summary:
 #&gt; 
 #&gt;  - input file:               filtered_3699snps_californicus.vcf
-#&gt;  - output file:              C:\Users\SAPCaps\AppData\Local\Temp\Rtmpy4zkTA\file1008c6d406bec.pcadapt
+#&gt;  - output file:              C:\Users\SAPCaps\AppData\Local\Temp\RtmpMrHwuJ\fileb63844ea3dd.pcadapt
 #&gt; 
 #&gt;  - number of individuals detected:   717
 #&gt;  - number of loci detected:      3699
@@ -384,10 +383,10 @@ package ?BiocManager? is not available for this version of R” Go to “Help,�
 <span id="cb490-3"><a href="week-7--fst-and-outlier-analysis.html#cb490-3" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(outliers)</span>
 <span id="cb490-4"><a href="week-7--fst-and-outlier-analysis.html#cb490-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 143</span></span></code></pre></div>
 </div>
-<div id="pcadapt-exercises" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> pcadapt Exercises</h2>
+<div id="pcadapt-exercises" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> pcadapt Exercises<a href="week-7--fst-and-outlier-analysis.html#pcadapt-exercises" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
-<h1 id="practice-questions-1">Practice Questions</h1>
+<h1 id="practice-questions-1" class="hasAnchor">Practice Questions<a href="week-7--fst-and-outlier-analysis.html#practice-questions-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
 <li>Perhaps we are particularly interested in SNPs associated with latitude. A first step might be to ask whether either of our PC axes represent latitudinal variation. <code>x$scores</code> gives you the PC loadings for each sample along the first and second PC axes. Combine these with the metadata to see whether either PC axes are correlated with latitude (for our purposes you can just visualize the relationship, you don’t have to run the statistics.)</li>
 </ol>
@@ -419,12 +418,18 @@ package ?BiocManager? is not available for this version of R” Go to “Help,�
 </p>
 </details>
 </div>
-<div id="using-fst-to-find-outliers" class="section level2" number="8.5">
-<h2><span class="header-section-number">8.5</span> Using F<sub>st</sub> to find outliers</h2>
+<div id="using-fst-to-find-outliers" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Using F<sub>st</sub> to find outliers<a href="week-7--fst-and-outlier-analysis.html#using-fst-to-find-outliers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Another way to look for signals of selection is to use F<sub>st</sub>. F<sub>st</sub> is a measure of genetic differentiation between populations. When we use F<sub>st</sub> to test for signals of selection, we ask if any SNPs are more divergent than expected given the genome-wide differentiation.</p>
 <p>Let’s start by loading a couple libraries:</p>
 <div class="sourceCode" id="cb494"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb494-1"><a href="week-7--fst-and-outlier-analysis.html#cb494-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(OutFLANK)</span>
-<span id="cb494-2"><a href="week-7--fst-and-outlier-analysis.html#cb494-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vcfR)</span></code></pre></div>
+<span id="cb494-2"><a href="week-7--fst-and-outlier-analysis.html#cb494-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vcfR)</span>
+<span id="cb494-3"><a href="week-7--fst-and-outlier-analysis.html#cb494-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb494-4"><a href="week-7--fst-and-outlier-analysis.html#cb494-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    *****       ***   vcfR   ***       *****</span></span>
+<span id="cb494-5"><a href="week-7--fst-and-outlier-analysis.html#cb494-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    This is vcfR 1.12.0 </span></span>
+<span id="cb494-6"><a href="week-7--fst-and-outlier-analysis.html#cb494-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      browseVignettes(&#39;vcfR&#39;) # Documentation</span></span>
+<span id="cb494-7"><a href="week-7--fst-and-outlier-analysis.html#cb494-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      citation(&#39;vcfR&#39;) # Citation</span></span>
+<span id="cb494-8"><a href="week-7--fst-and-outlier-analysis.html#cb494-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    *****       *****      *****       *****</span></span></code></pre></div>
 <p>We use the <em>vcfR</em> library to load the vcf file and extract just the genotypes. Remember there is a lot of information in VCF files, probably more than we want. vcfR has many different functions for extracting just some information so that you can use it any way you want</p>
 <div class="sourceCode" id="cb495"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb495-1"><a href="week-7--fst-and-outlier-analysis.html#cb495-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.vcfR</span>(vcf.path)</span>
 <span id="cb495-2"><a href="week-7--fst-and-outlier-analysis.html#cb495-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Scanning file to determine attributes.</span></span>
@@ -453,20 +458,13 @@ package ?BiocManager? is not available for this version of R” Go to “Help,�
 <span id="cb495-25"><a href="week-7--fst-and-outlier-analysis.html#cb495-25" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(geno)</span>
 <span id="cb495-26"><a href="week-7--fst-and-outlier-analysis.html#cb495-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3699  717</span></span>
 <span id="cb495-27"><a href="week-7--fst-and-outlier-analysis.html#cb495-27" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(geno[,<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span>
-<span id="cb495-28"><a href="week-7--fst-and-outlier-analysis.html#cb495-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        CRA_1756 CRA_1757 CRA_1758 CRA_1759 CRA_1760 CRA_1761 CRA_1762</span></span>
-<span id="cb495-29"><a href="week-7--fst-and-outlier-analysis.html#cb495-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7_11   &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;   </span></span>
-<span id="cb495-30"><a href="week-7--fst-and-outlier-analysis.html#cb495-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12_31  &quot;0/1&quot;    &quot;1/1&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;   </span></span>
-<span id="cb495-31"><a href="week-7--fst-and-outlier-analysis.html#cb495-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10_7   &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;   </span></span>
-<span id="cb495-32"><a href="week-7--fst-and-outlier-analysis.html#cb495-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10_18  &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/1&quot;   </span></span>
-<span id="cb495-33"><a href="week-7--fst-and-outlier-analysis.html#cb495-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10_32  &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;   </span></span>
-<span id="cb495-34"><a href="week-7--fst-and-outlier-analysis.html#cb495-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 101_21 &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;   </span></span>
-<span id="cb495-35"><a href="week-7--fst-and-outlier-analysis.html#cb495-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        CRA_1763 CRA_1764 CRA_1765</span></span>
-<span id="cb495-36"><a href="week-7--fst-and-outlier-analysis.html#cb495-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7_11   &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;   </span></span>
-<span id="cb495-37"><a href="week-7--fst-and-outlier-analysis.html#cb495-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12_31  &quot;0/0&quot;    &quot;0/1&quot;    &quot;0/0&quot;   </span></span>
-<span id="cb495-38"><a href="week-7--fst-and-outlier-analysis.html#cb495-38" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10_7   &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;   </span></span>
-<span id="cb495-39"><a href="week-7--fst-and-outlier-analysis.html#cb495-39" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10_18  &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;   </span></span>
-<span id="cb495-40"><a href="week-7--fst-and-outlier-analysis.html#cb495-40" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10_32  &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;   </span></span>
-<span id="cb495-41"><a href="week-7--fst-and-outlier-analysis.html#cb495-41" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 101_21 &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;</span></span></code></pre></div>
+<span id="cb495-28"><a href="week-7--fst-and-outlier-analysis.html#cb495-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        CRA_1756 CRA_1757 CRA_1758 CRA_1759 CRA_1760 CRA_1761 CRA_1762 CRA_1763 CRA_1764 CRA_1765</span></span>
+<span id="cb495-29"><a href="week-7--fst-and-outlier-analysis.html#cb495-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7_11   &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;   </span></span>
+<span id="cb495-30"><a href="week-7--fst-and-outlier-analysis.html#cb495-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12_31  &quot;0/1&quot;    &quot;1/1&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/1&quot;    &quot;0/0&quot;   </span></span>
+<span id="cb495-31"><a href="week-7--fst-and-outlier-analysis.html#cb495-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10_7   &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;   </span></span>
+<span id="cb495-32"><a href="week-7--fst-and-outlier-analysis.html#cb495-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10_18  &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/1&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;   </span></span>
+<span id="cb495-33"><a href="week-7--fst-and-outlier-analysis.html#cb495-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10_32  &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;   </span></span>
+<span id="cb495-34"><a href="week-7--fst-and-outlier-analysis.html#cb495-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 101_21 &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    NA       &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;    &quot;0/0&quot;</span></span></code></pre></div>
 <p>Check out the OutFLANK manual <a href="https://htmlpreview.github.io/?https://github.com/whitlock/OutFLANK/blob/master/inst/doc/OutFLANKAnalysis.html">here</a>. Notice that as our genotypes look like <code>0/0</code>, <code>0/1</code>, and <code>1/1</code>. But OutFLANK wants them to be 0, 1, or 2. The code below fixes this problem:</p>
 <div class="sourceCode" id="cb496"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb496-1"><a href="week-7--fst-and-outlier-analysis.html#cb496-1" aria-hidden="true" tabindex="-1"></a>G <span class="ot">&lt;-</span> geno  <span class="co">#we are doing this because we will be running a lot of different things with G, and if we mess up we want to be able to go back to geno</span></span>
 <span id="cb496-2"><a href="week-7--fst-and-outlier-analysis.html#cb496-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -479,8 +477,8 @@ package ?BiocManager? is not available for this version of R” Go to “Help,�
 <span id="cb496-9"><a href="week-7--fst-and-outlier-analysis.html#cb496-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1]  717 3699</span></span></code></pre></div>
 <p>Now <code>tG</code> should be in the input format OutFLANK needs, with SNPs as columns and individuals as rows. Now we can calculate F<sub>st</sub> for each SNP.</p>
 <p>For this analysis we are just going to calculate F<sub>st</sub> between the northernmost and the southernmost populations. This is a good time to practice our subsetting skills!</p>
-<p>For the second command: we are only taking the rows of tG that are “true,” or only taking the rows of tG that have one of these two populations “TBL” or “AK4”</p>
-<p>In the third command we are just using a slightly different method for subsetting with the command “subset.” If we subset “meta” we should end up with 62 rows (SNPs) and 2 columns (populations).</p>
+<p>For the second command: we are only taking the rows of tG that are “true”, or only taking the rows of tG that have one of these two populations “TBL” or “AK4”</p>
+<p>In the third command we are just using a slightly different method for subsetting with the command “subset”. If we subset “meta” we should end up with 62 rows (SNPs) and 2 columns (populations).</p>
 <div class="sourceCode" id="cb497"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb497-1"><a href="week-7--fst-and-outlier-analysis.html#cb497-1" aria-hidden="true" tabindex="-1"></a>subpops <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;TBL&quot;</span>,<span class="st">&quot;AK4&quot;</span>)</span>
 <span id="cb497-2"><a href="week-7--fst-and-outlier-analysis.html#cb497-2" aria-hidden="true" tabindex="-1"></a>subgen <span class="ot">&lt;-</span> tG[meta<span class="sc">$</span>SITE<span class="sc">%in%</span>subpops,] <span class="co">#subset method 1</span></span>
 <span id="cb497-3"><a href="week-7--fst-and-outlier-analysis.html#cb497-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -495,20 +493,13 @@ popNames= names our populations with the “SITE” labels</p>
 <div class="sourceCode" id="cb499"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb499-1"><a href="week-7--fst-and-outlier-analysis.html#cb499-1" aria-hidden="true" tabindex="-1"></a>fst <span class="ot">&lt;-</span> <span class="fu">MakeDiploidFSTMat</span>(subgen,<span class="at">locusNames=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(subgen),<span class="at">popNames=</span>submeta<span class="sc">$</span>SITE)</span>
 <span id="cb499-2"><a href="week-7--fst-and-outlier-analysis.html#cb499-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Calculating FSTs, may take a few minutes...</span></span>
 <span id="cb499-3"><a href="week-7--fst-and-outlier-analysis.html#cb499-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(fst)</span>
-<span id="cb499-4"><a href="week-7--fst-and-outlier-analysis.html#cb499-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   LocusName         He          FST            T1         T2    FSTNoCorr</span></span>
-<span id="cb499-5"><a href="week-7--fst-and-outlier-analysis.html#cb499-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1         1 0.16004925  0.013505690  0.0010989159 0.08136689 0.0329945019</span></span>
-<span id="cb499-6"><a href="week-7--fst-and-outlier-analysis.html#cb499-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2         2 0.32209911 -0.003522955 -0.0005712682 0.16215600 0.0137035701</span></span>
-<span id="cb499-7"><a href="week-7--fst-and-outlier-analysis.html#cb499-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3         3 0.03388823  0.023105548  0.0003994330 0.01728732 0.0396716826</span></span>
-<span id="cb499-8"><a href="week-7--fst-and-outlier-analysis.html#cb499-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4         4 0.17167063 -0.015959520 -0.0013698559 0.08583315 0.0001018514</span></span>
-<span id="cb499-9"><a href="week-7--fst-and-outlier-analysis.html#cb499-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5         5 0.05038644 -0.008598599 -0.0002175528 0.02530095 0.0086381886</span></span>
-<span id="cb499-10"><a href="week-7--fst-and-outlier-analysis.html#cb499-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6         6 0.08387196  0.082459876  0.0036351166 0.04408346 0.0972364381</span></span>
-<span id="cb499-11"><a href="week-7--fst-and-outlier-analysis.html#cb499-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       T1NoCorr   T2NoCorr meanAlleleFreq</span></span>
-<span id="cb499-12"><a href="week-7--fst-and-outlier-analysis.html#cb499-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 2.684676e-03 0.08136737      0.9122807</span></span>
-<span id="cb499-13"><a href="week-7--fst-and-outlier-analysis.html#cb499-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 2.222222e-03 0.16216374      0.7982456</span></span>
-<span id="cb499-14"><a href="week-7--fst-and-outlier-analysis.html#cb499-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 6.858711e-04 0.01728868      0.9827586</span></span>
-<span id="cb499-15"><a href="week-7--fst-and-outlier-analysis.html#cb499-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 8.742893e-06 0.08583971      0.9051724</span></span>
-<span id="cb499-16"><a href="week-7--fst-and-outlier-analysis.html#cb499-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 2.185723e-04 0.02530303      0.9741379</span></span>
-<span id="cb499-17"><a href="week-7--fst-and-outlier-analysis.html#cb499-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 4.286694e-03 0.04408526      0.9561404</span></span></code></pre></div>
+<span id="cb499-4"><a href="week-7--fst-and-outlier-analysis.html#cb499-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   LocusName         He          FST            T1         T2    FSTNoCorr     T1NoCorr   T2NoCorr meanAlleleFreq</span></span>
+<span id="cb499-5"><a href="week-7--fst-and-outlier-analysis.html#cb499-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1         1 0.16004925  0.013505690  0.0010989159 0.08136689 0.0329945019 2.684676e-03 0.08136737      0.9122807</span></span>
+<span id="cb499-6"><a href="week-7--fst-and-outlier-analysis.html#cb499-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2         2 0.32209911 -0.003522955 -0.0005712682 0.16215600 0.0137035701 2.222222e-03 0.16216374      0.7982456</span></span>
+<span id="cb499-7"><a href="week-7--fst-and-outlier-analysis.html#cb499-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3         3 0.03388823  0.023105548  0.0003994330 0.01728732 0.0396716826 6.858711e-04 0.01728868      0.9827586</span></span>
+<span id="cb499-8"><a href="week-7--fst-and-outlier-analysis.html#cb499-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4         4 0.17167063 -0.015959520 -0.0013698559 0.08583315 0.0001018514 8.742893e-06 0.08583971      0.9051724</span></span>
+<span id="cb499-9"><a href="week-7--fst-and-outlier-analysis.html#cb499-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5         5 0.05038644 -0.008598599 -0.0002175528 0.02530095 0.0086381886 2.185723e-04 0.02530303      0.9741379</span></span>
+<span id="cb499-10"><a href="week-7--fst-and-outlier-analysis.html#cb499-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6         6 0.08387196  0.082459876  0.0036351166 0.04408346 0.0972364381 4.286694e-03 0.04408526      0.9561404</span></span></code></pre></div>
 <div class="sourceCode" id="cb500"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb500-1"><a href="week-7--fst-and-outlier-analysis.html#cb500-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(fst<span class="sc">$</span>FST,<span class="at">breaks=</span><span class="dv">50</span>)</span></code></pre></div>
 <p><img src="Test_files/figure-html/7-7-1.png" width="768" /></p>
 <div class="sourceCode" id="cb501"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb501-1"><a href="week-7--fst-and-outlier-analysis.html#cb501-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fst<span class="sc">$</span>FST) <span class="co">#highest FST is higher than the mean (which is a good sign)</span></span>
@@ -542,10 +533,10 @@ The blue line is the Chi-Squared Distribution fit to the data
 <span id="cb504-2"><a href="week-7--fst-and-outlier-analysis.html#cb504-2" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(P1<span class="sc">$</span>LocusName[outliers],P1<span class="sc">$</span>FST[outliers],<span class="at">col=</span><span class="st">&quot;magenta&quot;</span>)</span></code></pre></div>
 <p><img src="Test_files/figure-html/7-9-1.png" width="768" /></p>
 </div>
-<div id="outflank-practice" class="section level2" number="8.6">
-<h2><span class="header-section-number">8.6</span> OutFLANK Practice</h2>
+<div id="outflank-practice" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> OutFLANK Practice<a href="week-7--fst-and-outlier-analysis.html#outflank-practice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
-<h1 id="practice-questions-2">Practice Questions</h1>
+<h1 id="practice-questions-2" class="hasAnchor">Practice Questions<a href="week-7--fst-and-outlier-analysis.html#practice-questions-2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
 <li>We tested for Fst outliers between just the northernmost and southernmost sampling sites. Do we get more outliers that we expect between any two sites? Choose two sites within the northern and southern groups and see if there are any outliers.</li>
 </ol>
@@ -579,8 +570,8 @@ The blue line is the Chi-Squared Distribution fit to the data
 </p>
 </details>
 </div>
-<div id="creature-of-the-week-6" class="section level2" number="8.7">
-<h2><span class="header-section-number">8.7</span> Creature of the Week!</h2>
+<div id="creature-of-the-week-6" class="section level2 hasAnchor" number="8.7">
+<h2><span class="header-section-number">8.7</span> Creature of the Week!<a href="week-7--fst-and-outlier-analysis.html#creature-of-the-week-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="figure">
 <img src="figs/creatures/anglerfish.jpg" alt="" />
 <p class="caption">Black Sea Devil Angler Fish (Image credit: Bluegreen Pictures/Alamy)</p>
