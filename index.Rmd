@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 </center>
 
 
-Welcome to Marine Genomics. This is a course on learning how to analyze genomic data for undergraduate students. We focused on marine organisms but these lessons can easily be applied to any taxa. We required that students have a background in biology and have completed the general biology series. Additionally, it is helpful if students have taken a course in Evolution, though this was not a requirement. We did not require any coding experience in R or Bash/UNIX. 
+Welcome to Marine Genomics! This is a course on learning how to analyze genomic data for undergraduate students. We focused on marine organisms but these lessons can easily be applied to any taxa. We required that students have a background in biology and have completed the general biology series. Additionally, it is helpful if students have taken a course in Evolution, though this was not a requirement. We did not require any coding experience in R or Bash/UNIX. 
 
 We have now taught this course several times. There is a **semester version** [here](https://baylab.github.io/MarineGenomicsSemester/). And our version from Spring 2022 [here](https://baylab.github.io/MarineGenomics2022/)
 
