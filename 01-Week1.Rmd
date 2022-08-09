@@ -1,9 +1,5 @@
 ---
-<<<<<<< HEAD
-title: "Marine Genomics"
-=======
-title: 
->>>>>>> fdeea8aab231fb0e979147922f707d88194ae0d6
+title:
 author: 
 date: 
 output:
