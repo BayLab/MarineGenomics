@@ -131,7 +131,7 @@ In order to get an accurate estimate of the "best" K for our data we need to run
 
 We need to read each of these K files into R and pull out the log-likehood values. We'll then do a test via the Cluster Markov Packager Across K from Evanno which can be seen [here](http://clumpak.tau.ac.il/index.html)
 
-```{r echo=T}
+```{r block1, echo=T}
 
 #read in the data
 
@@ -141,6 +141,10 @@ data<-list.files("structure_outs/", pattern = ".log", full.names = T)
 
 data
 
+```
+
+
+```{r block2, echo=T}
 #use lapply to read in all our log files at once
 bigData<-lapply(1:21, FUN = function(i) readLines(data[i]))
 
